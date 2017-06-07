@@ -1,0 +1,174 @@
+﻿<section class="content-header">
+    <h1>
+        Thống kê chi tiết
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+        <li><a href="#">Thống kê</a></li>
+        <li class="active">Thống kê chi tiết</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="box">
+        <div class="box-body">
+            <di class="row">
+                <form class="form-inline">
+                    <div class="input-group">
+                        <div class="input-group-addon">Từ</div>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon">Đến</div>
+                        <input type="date" class="form-control">
+                    </div>
+
+                    <button class="btn btn-default" ng-click="search()">Thống kê</button>
+                    <button class="btn btn-default" ng-click="search()">Xuất Excel</button>
+
+                    <div class="input-group pull-right">
+                        <input type="checkbox" name="vehicle" value="Bike"> Send mail
+                        <input type="radio" name="gender" value="male" checked> Trong bãi
+                        <input type="radio" name="gender" value="female"> Ngoài bãi
+
+                        <input type="checkbox" name="vehicle" checked="" value="Bike"> Xe tháng
+                        <input type="checkbox" name="vehicle" checked value="Bike"> Xe vãng lai
+                    </div>
+                </form>
+            </di>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Mã thẻ</th>
+                            <th>Biển số</th>
+                            <th>Giờ vào</th>
+                            <th>Giờ ra</th>
+                            <th>Giá Vé</th>
+                            <th>Loại vé</th>
+                            <th>Nhân Viên (Vào)</th>
+                            <th>Nhân Viên (Ra)</th>
+                        </tr>
+                        <tr>
+                            <td>0100BC4E8C</td>
+                            <td>51M3-8678</td>
+                            <td>31/12/2016 12:09</td>
+                            <td>Xe trong bãi </td>
+                            <td>Loại Vé đã xóa</td>
+                            <td>
+                                Vé tháng
+                            </td>
+                            <td>
+                                Quản lý
+                            </td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td>02002592D4</td>
+                            <td>51M3-8674</td>
+                            <td>31/12/2016 11:09</td>
+                            <td>Xe trong bãi </td>
+                            <td>Loại Vé đã xóa</td>
+                            <td>
+                                Vé tháng
+                            </td>
+                            <td>
+                                Quản lý
+                            </td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td>0110BH4E8C</td>
+                            <td>51M3-8611</td>
+                            <td>31/12/2016 12:19</td>
+                            <td>Xe trong bãi </td>
+                            <td>Loại Vé đã xóa</td>
+                            <td>
+                                Loại Vé đã xóa
+                            </td>
+                            <td>
+                                Quản lý
+                            </td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td style="color: red">Số lượt xe</td>
+                            <td></td>
+                            <td style="color: red">3</td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td style="color: red">Xe vãng lai</td>
+                            <td></td>
+                            <td style="color: red">1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>- Xe đạp</td>
+                            <td></td>
+                            <td>0</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>- Xe máy</td>
+                            <td></td>
+                            <td>0</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td style="color: red">Xe tháng</td>
+                            <td></td>
+                            <td style="color: red">2</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                        </tr>
+                        <tfoot>
+                            <tr>
+                                <td colspan="8"><span class="pull-right">Trang: 1 - Tổng số bản ghi: 3</span></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <div ng-if="loading">
+                        <div class="col-xs-4"></div>
+                        <div class="col-xs-4">
+                            <i class="fa fa-refresh fa-4x fa-spin"></i> <label class="label label-primary">Đang tải...</label>
+                        </div>
+                        <div class="col-xs-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.box-body -->
+        <!--<div class="box-footer clearfix">
+            <pager-directive page="{{page}}" custom-path="{{customPath}}" pages-count="{{pagesCount}}" total-count="{{totalCount}}" search-func="getThongKes(page)"></pager-directive>
+        </div>-->
+    </div>
+</section><!-- /.content -->

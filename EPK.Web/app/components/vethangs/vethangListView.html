@@ -1,0 +1,171 @@
+﻿  <!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Quản ly vé tháng
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+        <li><a href="#">Danh mục</a></li>
+        <li class="active"> Vé tháng</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-2">
+            <!-- AREA CHART -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Danh mục</h3>
+                </div>
+                <div class="box-body">
+                    <di class="row">
+                        <button class="btn btn-success btn-sm" ui-sref="dmnhanvien_add">Thêm</button>
+                        <button class="btn btn-primary btn-sm" ui-sref="dmnhanvien_add" disabled>Sửa</button>
+                        <button class="btn btn-danger btn-sm" ui-sref="dmnhanvien_add" disabled>Xóa</button>
+                    </di>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>#</td>
+                                    <th style="width: 100%">Tên</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="all" /></td>
+                                    <th><a ui-sref="#">abc</a></th>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="all" /></td>
+                                    <th><a ui-sref="#">abc</a></th>
+                                </tr>
+                            </table>
+                            <div ng-if="loading">
+                                <div class="col-xs-4"></div>
+                                <div class="col-xs-4">
+                                    <i class="fa fa-refresh fa-4x fa-spin"></i> <label class="label label-primary">Đang tải...</label>
+                                </div>
+                                <div class="col-xs-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+        <!-- /.col (LEFT) -->
+        <div class="col-md-10">
+            <!-- LINE CHART -->
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Vé tháng</h3>
+                </div>
+                <div class="box-body">
+                    <di class="row">
+                        <!--<form class="form-inline">
+                            <input type="text" class="form-control" placeholder="Từ khóa">
+                            <button class="btn btn-success" ui-sref="dmnhanvien_add">Thêm</button>
+                            <button class="btn btn-danger" ng-click="search()" disabled>Xóa</button>
+                            <button class="btn btn-primary" ng-click="search()" disabled>Gia hạn</button>
+                            <button class="btn btn-default" ng-click="search()">Xuất Excel</button>
+
+                            <div class="input-group pull-right">
+                                <input type="radio" name="gender" value="Bike" checked> Tất cả
+                                <input type="radio" name="gender" value="male"> Còn hạn
+                                <input type="radio" name="gender" value="female"> Hết hạn
+                            </div>
+                        </form>-->
+                        
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" ng-model="filterExpression" placeholder="Từ khóa">
+                        </div>
+                        <div class="col-md-7">
+                            <button class="btn btn-success" ui-sref="dmnhanvien_add">Thêm</button>
+                            <button class="btn btn-danger" ng-click="search()" disabled>Xóa</button>
+                            <button class="btn btn-primary" ng-click="search()" disabled>Gia hạn</button>
+                            <button class="btn btn-default" ng-click="search()">Xuất Excel</button>
+                            
+                            <input type="radio" name="gender" value="Bike" checked> Tất cả
+                            <input type="radio" name="gender" value="male"> Còn hạn
+                            <input type="radio" name="gender" value="female"> Hết hạn
+                        </div>
+                    </di>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td><input name="all" type="checkbox" ng-click="selectAll()" /></td>
+                                    <th>Mã thẻ</th>
+                                    <th>Biển số</th>
+                                    <th>Giá vé</th>
+                                    <th>Ngày đăng ký</th>
+                                    <th>Ngày hết hạn</th>
+                                    <th>Loại xe</th>
+                                    <th>Họ tên</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" ng-model="item.checked" name="all" /></td>
+                                    <td>0000BF4FC8</td>
+                                    <td>59S1-539.58</td>
+                                    <td>112.000</td>
+                                    <td>2016-12-31 11:49</td>
+                                    <td>2016-12-31 11:49</td>
+                                    <td>Dream/Wave</td>
+                                    <td>Khanh Kaka</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary" title="Sửa" ui-sref="dmnhanvien_edit({id:item.Id})"><i class="fa fa-pencil"></i></button>
+                                        <button class="btn  btn-sm btn-danger" title="Xóa" ng-click="deleteDmNhanVien(item.Id)"><i class="fa fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" ng-model="item.checked" name="all" /></td>
+                                    <td>0000BF4FC8</td>
+                                    <td>59S1-539.58</td>
+                                    <td>112.000</td>
+                                    <td>2016-12-31 11:49</td>
+                                    <td>2016-12-31 11:49</td>
+                                    <td>Dream/Wave</td>
+                                    <td>Khanh Kaka</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary" title="Sửa" ui-sref="dmnhanvien_edit({id:item.Id})"><i class="fa fa-pencil"></i></button>
+                                        <button class="btn  btn-sm btn-danger" title="Xóa" ng-click="deleteDmNhanVien(item.Id)"><i class="fa fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" ng-model="item.checked" name="all" /></td>
+                                    <td>0000BF4FC8</td>
+                                    <td>59S1-539.58</td>
+                                    <td>112.000</td>
+                                    <td>2016-12-31 11:49</td>
+                                    <td>2016-12-31 11:49</td>
+                                    <td>Dream/Wave</td>
+                                    <td>Khanh Kaka</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary" title="Sửa" ui-sref="dmnhanvien_edit({id:item.Id})"><i class="fa fa-pencil"></i></button>
+                                        <button class="btn  btn-sm btn-danger" title="Xóa" ng-click="deleteDmNhanVien(item.Id)"><i class="fa fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="9"><span class="pull-right">Trang: 1 - Tổng số bản ghi: 3</span></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <div ng-if="loading">
+                                <div class="col-xs-4"></div>
+                                <div class="col-xs-4">
+                                    <i class="fa fa-refresh fa-4x fa-spin"></i> <label class="label label-primary">Đang tải...</label>
+                                </div>
+                                <div class="col-xs-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+        <!-- /.col (RIGHT) -->
+    </div>
+    <!-- /.row -->
+</section>

@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EPK.Web</name>
+    </assembly>
+    <members>
+        <member name="T:EPK.Web.BundleConfig">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EPK.Web.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+             <summary>
+            
+             </summary>
+             <param name="bundles"></param>
+        </member>
+        <member name="T:EPK.Web.FilterConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EPK.Web.FilterConfig.RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)">
+            <summary>
+            
+            </summary>
+            <param name="filters"></param>
+        </member>
+        <member name="T:EPK.Web.RouteConfig">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EPK.Web.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+             <summary>
+            
+             </summary>
+             <param name="routes"></param>
+        </member>
+        <member name="T:EPK.Web.Startup">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EPK.Web.Startup.ConfigureAuth(Owin.IAppBuilder)">
+             <summary>
+            
+             </summary>
+             <param name="app"></param>
+        </member>
+        <member name="T:EPK.Web.Startup.AuthorizationServerProvider">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EPK.Web.Startup.Configuration(Owin.IAppBuilder)">
+             <summary>
+            
+             </summary>
+             <param name="app"></param>
+        </member>
+        <member name="T:EPK.Web.WebApiConfig">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EPK.Web.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+             <summary>
+            
+             </summary>
+             <param name="config"></param>
+        </member>
+        <member name="T:EPK.Web.Controllers.ApplicationGroupController">
+             <summary>
+            
+             </summary>
+             [Authorize]
+        </member>
+        <member name="M:EPK.Web.Controllers.ApplicationGroupController.GetListPaging(System.Net.Http.HttpRequestMessage,System.Int32,System.Int32,System.String)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <param name="page"></param>
+             <param name="pageSize"></param>
+             <param name="filter"></param>
+             <returns></returns>
+        </member>
+        <member name="T:EPK.Web.Controllers.ApplicationUserController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EPK.Web.Controllers.ApplicationUserController.#ctor(EPK.Service.IApplicationUserService)">
+             <summary>
+            
+             </summary>
+             <param name="appUser"></param>
+        </member>
+        <member name="M:EPK.Web.Controllers.ApplicationUserController.GetListPaging(System.Net.Http.HttpRequestMessage,System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <param name="page"></param>
+             <param name="pageSize"></param>
+             <returns></returns>
+        </member>
+        <member name="T:EPK.Web.Controllers.DmNhanVienController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EPK.Web.Controllers.DmNhanVienController.#ctor(EPK.Service.IDmNhanVienService)">
+             <summary>
+            
+             </summary>
+             <param name="dmNhanVienService"></param>
+        </member>
+        <member name="M:EPK.Web.Controllers.DmNhanVienController.GetById(System.Net.Http.HttpRequestMessage,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:EPK.Web.Controllers.DmNhanVienController.GetAll(System.Net.Http.HttpRequestMessage,System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <param name="page"></param>
+             <param name="pageSize"></param>
+             <returns></returns>
+        </member>
+        <member name="M:EPK.Web.Controllers.DmNhanVienController.Post(System.Net.Http.HttpRequestMessage,EPK.Data.Models.DmNhanVien)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <param name="dmNhanVien"></param>
+             <returns></returns>
+        </member>
+        <member name="M:EPK.Web.Controllers.DmNhanVienController.Put(System.Net.Http.HttpRequestMessage,EPK.Data.Models.DmNhanVien)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <param name="dmNhanVien"></param>
+             <returns></returns>
+        </member>
+        <member name="M:EPK.Web.Controllers.DmNhanVienController.Delete(System.Net.Http.HttpRequestMessage,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:EPK.Web.Controllers.DmNhanVienController.DeleteMulti(System.Net.Http.HttpRequestMessage,System.String)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <param name="listId"></param>
+             <returns></returns>
+        </member>
+        <member name="T:EPK.Web.Controllers.HomeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EPK.Web.Controllers.HomeController.Index">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EPK.Web.Controllers.NhanVienController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EPK.Web.Controllers.NhanVienController.#ctor(EPK.Service.INhanVienService)">
+             <summary>
+            
+             </summary>
+             <param name="nhanVienService"></param>
+        </member>
+        <member name="M:EPK.Web.Controllers.NhanVienController.GetAll(System.Net.Http.HttpRequestMessage,System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <param name="page"></param>
+             <param name="pageSize"></param>
+             <returns></returns>
+        </member>
+        <member name="T:EPK.Web.Controllers.TheController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EPK.Web.Controllers.TheController.#ctor(EPK.Service.ITheService)">
+             <summary>
+            
+             </summary>
+             <param name="theService"></param>
+        </member>
+        <member name="M:EPK.Web.Controllers.TheController.GetAll(System.Net.Http.HttpRequestMessage,System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <param name="page"></param>
+             <param name="pageSize"></param>
+             <returns></returns>
+        </member>
+        <member name="T:EPK.Web.Controllers.ThongKeController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EPK.Web.Controllers.ThongKeController.#ctor(EPK.Service.IThongKeService)">
+             <summary>
+            
+             </summary>
+             <param name="thongKeService"></param>
+        </member>
+        <member name="M:EPK.Web.Controllers.ThongKeController.ThongKeGiaHan(System.Net.Http.HttpRequestMessage,System.Int32,System.Int32,System.String,System.String)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <param name="page"></param>
+             <param name="pageSize"></param>
+             <param name="fromDate"></param>
+             <param name="toDate"></param>
+             <returns></returns>
+        </member>
+        <member name="T:EPK.Web.WebApiApplication">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EPK.Web.WebApiApplication.Application_Start">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EPK.Web.Infrastructure.Core.ApiControllerBase">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EPK.Web.Infrastructure.Core.ApiControllerBase.CreateHttpResponse(System.Net.Http.HttpRequestMessage,System.Func{System.Net.Http.HttpResponseMessage})">
+             <summary>
+            
+             </summary>
+             <param name="requestMessage"></param>
+             <param name="function"></param>
+             <returns></returns>
+        </member>
+        <member name="T:EPK.Web.Infrastructure.Core.PaginationSet`1">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:EPK.Web.Infrastructure.Core.PaginationSet`1.Page">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EPK.Web.Infrastructure.Core.PaginationSet`1.Count">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EPK.Web.Infrastructure.Core.PaginationSet`1.TotalPages">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EPK.Web.Infrastructure.Core.PaginationSet`1.TotalCount">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EPK.Web.Infrastructure.Core.PaginationSet`1.MaxPage">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EPK.Web.Infrastructure.Core.PaginationSet`1.Items">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EPK.Web.Mappings.AutoMapperConfiguration">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EPK.Web.Mappings.AutoMapperConfiguration.Configure">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EPK.Web.Models.ApplicationUserViewModel">
+             <summary>
+            
+             </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPK.Data", "EPK.Data\EPK.Data.csproj", "{0484A0BB-E9F2-451E-960C-7BF4C5CBE1D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPK.Web", "EPK.Web\EPK.Web.csproj", "{E3C5141D-3191-4416-86EF-311224396798}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPK.Service", "EPK.Service\EPK.Service.csproj", "{45E95878-F37F-4572-83F3-C36784BBE8DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0484A0BB-E9F2-451E-960C-7BF4C5CBE1D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0484A0BB-E9F2-451E-960C-7BF4C5CBE1D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0484A0BB-E9F2-451E-960C-7BF4C5CBE1D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0484A0BB-E9F2-451E-960C-7BF4C5CBE1D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3C5141D-3191-4416-86EF-311224396798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3C5141D-3191-4416-86EF-311224396798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3C5141D-3191-4416-86EF-311224396798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3C5141D-3191-4416-86EF-311224396798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E95878-F37F-4572-83F3-C36784BBE8DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E95878-F37F-4572-83F3-C36784BBE8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E95878-F37F-4572-83F3-C36784BBE8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E95878-F37F-4572-83F3-C36784BBE8DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

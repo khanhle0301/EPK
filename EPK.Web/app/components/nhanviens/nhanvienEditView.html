@@ -1,0 +1,79 @@
+﻿  <!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Thêm mới
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="javascript:void(0);"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+        <li><a href="javascript:void(0);">Quản lý</a></li>
+        <li><a ui-sref="nhanviens">Nhân viên</a></li>
+        <li><a ui-sref="nhanviens">Nhân viên</a></li>
+        <li class="active">Thêm mới</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!-- Horizontal Form -->
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Thêm mới nhân viên</h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" novalidate name="frmEditnhanvien" role="form" ng-submit="Updatenhanvien()">
+            <div class="box-body">
+                <div class="form-group" ng-class="{ 'has-error' : frmEditnhanvien.ten.$invalid && !frmEditnhanvien.ten.$pristine }">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Tên </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-maxlength="300" required name="ten" ng-model="nhanvien.Ten">
+                        <span ng-show="frmEditnhanvien.ten.$invalid" class="has-error">Phải nhập tên</span>
+                        <span ng-show="frmEditnhanvien.ten.$error.maxlength" class="has-error">Tênchỉ được 300 ký tự</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Danh mục</label>
+                    <div class="col-sm-10">
+                        <select name="parentId" required class="form-control" ng-model="nhanvien.DanhMucId" ng-options="option.Id as option.Ten for option in dmNhanViens">
+                            <option value="">Chọn danh mục</option>
+                        </select>
+                        <span ng-show="frmEditnhanvien.DanhMucId.$invalid" class="has-error">Phải chọn danh mục</span>
+                        <input type="hidden" name="parentId" ng-model="nhanvien.DanhMucId" />
+                    </div>
+                </div>
+
+                <div class="form-group" ng-class="{ 'has-error' : frmEditnhanvien.diachi.$invalid && !frmEditnhanvien.diachi.$pristine }">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Địa chỉ</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="diachi" ng-maxlength="300" ng-model="nhanvien.DiaChi">
+                        <span ng-show="frmEditnhanvien.diachi.$error.maxlength" class="has-error">Địa chỉ chỉ được 300 ký tự</span>
+                    </div>
+                </div>
+
+                <div class="form-group" ng-class="{ 'has-error' : frmEditnhanvien.sodienthoai.$invalid && !frmEditnhanvien.sodienthoai.$pristine }">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Số điện thoại</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="sodienthoai" ng-model="nhanvien.SoDienThoai">
+                    </div>
+                </div>
+
+                <div class="form-group" ng-class="{ 'has-error' : frmEditnhanvien.luong.$invalid && !frmEditnhanvien.luong.$pristine }">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Lương</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="luong" ng-model="nhanvien.Luong">
+                    </div>
+                </div>
+
+                <div class="form-group" ng-class="{ 'has-error' : frmEditnhanvien.ghichu.$invalid && !frmEditnhanvien.ghichu.$pristine }">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Ghi chú</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="ghichu" ng-maxlength="300" ng-model="nhanvien.GhiChu">
+                        <span ng-show="frmEditnhanvien.ghichu.$error.maxlength" class="has-error">Ghi chú chỉ được 300 ký tự</span>
+                    </div>
+                </div>
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+                <button ui-sref="nhanviens" class="btn btn-default">Hủy</button>
+                <button type="submit" ng-disabled="frmEditnhanvien.$invalid" class="btn btn-success pull-right">Lưu</button>
+            </div><!-- /.box-footer -->
+        </form>
+    </div><!-- /.box -->
+</section><!-- /.content -->

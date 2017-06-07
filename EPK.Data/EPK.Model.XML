@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EPK.Data</name>
+    </assembly>
+    <members>
+        <member name="T:EPK.Common.CommonConstants">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EPK.Common.CommonConstants.Token">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EPK.Data.Common.ConfigHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EPK.Data.Common.ConfigHelper.GetByKey(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EPK.Data.Common.ViewModels.ThongKeGianHanViewModel">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EPK.Data.Resources.CurrentLink">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.AddDmNhanVien">
+            <summary>
+              Looks up a localized string similar to /api/dmnhanvien/create.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.AddNhanVien">
+            <summary>
+              Looks up a localized string similar to /api/nhanvien/create.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.ApplicationUser">
+            <summary>
+              Looks up a localized string similar to /api/applicationUser/getall.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.DeleteDmNhanVien">
+            <summary>
+              Looks up a localized string similar to /api/dmnhanvien/delete.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.DeleteMultiDmNhanVien">
+            <summary>
+              Looks up a localized string similar to /api/dmnhanvien/deletemulti.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.DeleteMultiNhanVien">
+            <summary>
+              Looks up a localized string similar to /api/nhanvien/deletemulti.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.DeleteNhanVien">
+            <summary>
+              Looks up a localized string similar to /api/nhanvien/delete.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetAllDmNhanVien">
+            <summary>
+              Looks up a localized string similar to /api/dmnhanvien/getall.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetAllNhanVien">
+            <summary>
+              Looks up a localized string similar to /api/nhanvien/getall.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetAllThe">
+            <summary>
+              Looks up a localized string similar to /api/the/getall.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetByIdDmNhanVien">
+            <summary>
+              Looks up a localized string similar to /api/dmnhanvien/getbyid.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetByIdNhanVien">
+            <summary>
+              Looks up a localized string similar to /api/nhanvien/getbyid.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.ThongKeGiaHan">
+            <summary>
+              Looks up a localized string similar to /api/thongke/thongkegiahan.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.UpdateDmNhanVien">
+            <summary>
+              Looks up a localized string similar to /api/dmnhanvien/update.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.UpdateNhanVien">
+            <summary>
+              Looks up a localized string similar to /api/nhanvien/update.
+            </summary>
+        </member>
+    </members>
+</doc>
