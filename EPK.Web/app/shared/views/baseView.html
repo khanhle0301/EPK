@@ -152,9 +152,19 @@
                     <ul class="treeview-menu">
                         <li><a ui-sref="thes"><i class="fa fa-circle-o"></i> Thẻ</a></li>
                         <li><a ui-sref="loaives"><i class="fa fa-circle-o"></i>Vé xe </a></li>
-                        <li><a ui-sref="vethangs"><i class="fa fa-circle-o"></i> Vé Tháng</a></li>
+                        <li class="treeview">
+                            <a href="javascript:void(0);">
+                                <i class="fa fa-circle-o"></i> Vé Tháng
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu" style="display: none;">
+                                <li><a ui-sref="dmvethangs"><i class="fa fa-circle-o"></i> Danh mục</a></li>
+                                <li><a ui-sref="vethangs"><i class="fa fa-circle-o"></i> Vé Tháng</a></li>
+                            </ul>
+                        </li>                     
                         <li><a ui-sref="application_users"><i class="fa fa-circle-o"></i> Tài khoản</a></li>
-                        <li><a ui-sref="nhanviens"><i class="fa fa-circle-o"></i>Nhân viên </a></li>
                         <li class="treeview">
                             <a href="javascript:void(0);">
                                 <i class="fa fa-circle-o"></i> Nhân viên

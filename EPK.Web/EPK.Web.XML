@@ -166,6 +166,12 @@
              <param name="listId"></param>
              <returns></returns>
         </member>
+        <member name="M:EPK.Web.Controllers.DmVeThangController.#ctor(EPK.Service.IDmVeThangService)">
+             <summary>
+            
+             </summary>
+             <param name="dmVeThangService"></param>
+        </member>
         <member name="T:EPK.Web.Controllers.HomeController">
             <summary>
             
@@ -215,6 +221,14 @@
              <param name="request"></param>
              <param name="page"></param>
              <param name="pageSize"></param>
+             <returns></returns>
+        </member>
+        <member name="M:EPK.Web.Controllers.TheController.DeleteMulti(System.Net.Http.HttpRequestMessage,System.String)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <param name="listId"></param>
              <returns></returns>
         </member>
         <member name="T:EPK.Web.Controllers.ThongKeController">

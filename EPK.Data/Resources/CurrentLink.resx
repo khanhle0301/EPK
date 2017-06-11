@@ -120,6 +120,9 @@
   <data name="AddDmNhanVien" xml:space="preserve">
     <value>/api/dmnhanvien/create</value>
   </data>
+  <data name="AddDmVeThang" xml:space="preserve">
+    <value>/api/dmvethang/create</value>
+  </data>
   <data name="AddNhanVien" xml:space="preserve">
     <value>/api/nhanvien/create</value>
   </data>
@@ -129,17 +132,32 @@
   <data name="DeleteDmNhanVien" xml:space="preserve">
     <value>/api/dmnhanvien/delete</value>
   </data>
+  <data name="DeleteDmVeThang" xml:space="preserve">
+    <value>/api/dmvethang/delete</value>
+  </data>
   <data name="DeleteMultiDmNhanVien" xml:space="preserve">
     <value>/api/dmnhanvien/deletemulti</value>
+  </data>
+  <data name="DeleteMultiDmVeThang" xml:space="preserve">
+    <value>/api/dmvethang/deletemulti</value>
   </data>
   <data name="DeleteMultiNhanVien" xml:space="preserve">
     <value>/api/nhanvien/deletemulti</value>
   </data>
+  <data name="DeleteMultiThe" xml:space="preserve">
+    <value>/api/the/deletemulti</value>
+  </data>
   <data name="DeleteNhanVien" xml:space="preserve">
     <value>/api/nhanvien/delete</value>
   </data>
+  <data name="DeleteThe" xml:space="preserve">
+    <value>/api/the/delete</value>
+  </data>
   <data name="GetAllDmNhanVien" xml:space="preserve">
     <value>/api/dmnhanvien/getall</value>
+  </data>
+  <data name="GetAllDmVeThang" xml:space="preserve">
+    <value>/api/dmvethang/getall</value>
   </data>
   <data name="GetAllNhanVien" xml:space="preserve">
     <value>/api/nhanvien/getall</value>
@@ -150,6 +168,9 @@
   <data name="GetByIdDmNhanVien" xml:space="preserve">
     <value>/api/dmnhanvien/getbyid</value>
   </data>
+  <data name="GetByIdDmVeThang" xml:space="preserve">
+    <value>/api/dmvethang/getbyid</value>
+  </data>
   <data name="GetByIdNhanVien" xml:space="preserve">
     <value>/api/nhanvien/getbyid</value>
   </data>
@@ -159,7 +180,13 @@
   <data name="UpdateDmNhanVien" xml:space="preserve">
     <value>/api/dmnhanvien/update</value>
   </data>
+  <data name="UpdateDmVeThang" xml:space="preserve">
+    <value>/api/dmvethang/update</value>
+  </data>
   <data name="UpdateNhanVien" xml:space="preserve">
     <value>/api/nhanvien/update</value>
+  </data>
+  <data name="UpdateThe" xml:space="preserve">
+    <value>/api/the/update</value>
   </data>
 </root>

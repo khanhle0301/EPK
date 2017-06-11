@@ -63,7 +63,7 @@ namespace EPK.Service
             return _client.PutAsJsonAsync(CurrentLink.UpdateDmNhanVien, dmNhanVien).Result;
         }
 
-        HttpResponseMessage IDmNhanVienService.GetAll()
+        public HttpResponseMessage GetAll()
         {
             return _client.GetAsync(CurrentLink.GetAllDmNhanVien).Result;
         }

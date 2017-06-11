@@ -52,6 +52,11 @@
               Looks up a localized string similar to /api/dmnhanvien/create.
             </summary>
         </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.AddDmVeThang">
+            <summary>
+              Looks up a localized string similar to /api/dmvethang/create.
+            </summary>
+        </member>
         <member name="P:EPK.Data.Resources.CurrentLink.AddNhanVien">
             <summary>
               Looks up a localized string similar to /api/nhanvien/create.
@@ -67,9 +72,19 @@
               Looks up a localized string similar to /api/dmnhanvien/delete.
             </summary>
         </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.DeleteDmVeThang">
+            <summary>
+              Looks up a localized string similar to /api/dmvethang/delete.
+            </summary>
+        </member>
         <member name="P:EPK.Data.Resources.CurrentLink.DeleteMultiDmNhanVien">
             <summary>
               Looks up a localized string similar to /api/dmnhanvien/deletemulti.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.DeleteMultiDmVeThang">
+            <summary>
+              Looks up a localized string similar to /api/dmvethang/deletemulti.
             </summary>
         </member>
         <member name="P:EPK.Data.Resources.CurrentLink.DeleteMultiNhanVien">
@@ -77,14 +92,29 @@
               Looks up a localized string similar to /api/nhanvien/deletemulti.
             </summary>
         </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.DeleteMultiThe">
+            <summary>
+              Looks up a localized string similar to /api/the/deletemulti.
+            </summary>
+        </member>
         <member name="P:EPK.Data.Resources.CurrentLink.DeleteNhanVien">
             <summary>
               Looks up a localized string similar to /api/nhanvien/delete.
             </summary>
         </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.DeleteThe">
+            <summary>
+              Looks up a localized string similar to /api/the/delete.
+            </summary>
+        </member>
         <member name="P:EPK.Data.Resources.CurrentLink.GetAllDmNhanVien">
             <summary>
               Looks up a localized string similar to /api/dmnhanvien/getall.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetAllDmVeThang">
+            <summary>
+              Looks up a localized string similar to /api/dmvethang/getall.
             </summary>
         </member>
         <member name="P:EPK.Data.Resources.CurrentLink.GetAllNhanVien">
@@ -102,6 +132,11 @@
               Looks up a localized string similar to /api/dmnhanvien/getbyid.
             </summary>
         </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetByIdDmVeThang">
+            <summary>
+              Looks up a localized string similar to /api/dmvethang/getbyid.
+            </summary>
+        </member>
         <member name="P:EPK.Data.Resources.CurrentLink.GetByIdNhanVien">
             <summary>
               Looks up a localized string similar to /api/nhanvien/getbyid.
@@ -117,9 +152,19 @@
               Looks up a localized string similar to /api/dmnhanvien/update.
             </summary>
         </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.UpdateDmVeThang">
+            <summary>
+              Looks up a localized string similar to /api/dmvethang/update.
+            </summary>
+        </member>
         <member name="P:EPK.Data.Resources.CurrentLink.UpdateNhanVien">
             <summary>
               Looks up a localized string similar to /api/nhanvien/update.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.UpdateThe">
+            <summary>
+              Looks up a localized string similar to /api/the/update.
             </summary>
         </member>
     </members>

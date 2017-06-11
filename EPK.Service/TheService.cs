@@ -1,16 +1,22 @@
 ﻿using EPK.Common;
+using EPK.Data.Common;
 using EPK.Data.Models;
+using EPK.Data.Resources;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using EPK.Data.Common;
 
 namespace EPK.Service
 {
     public interface ITheService
     {
-        IEnumerable<The> GetAll(string path);
+        HttpResponseMessage GetAll();
+
+        HttpResponseMessage Update(The the);
+
+        HttpResponseMessage Delete(string id);
+
+        HttpResponseMessage DeleteMulti(string listId);
     }
 
     public class TheService : ITheService
@@ -26,15 +32,24 @@ namespace EPK.Service
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", CommonConstants.Token);
         }
 
-        public IEnumerable<The> GetAll(string path)
+        public HttpResponseMessage Delete(string id)
         {
-            IEnumerable<The> the = null;
-            HttpResponseMessage response = _client.GetAsync(path).Result;
-            if (response.IsSuccessStatusCode)
-            {
-                the = response.Content.ReadAsAsync<List<The>>().Result;
-            }
-            return the;
+            return _client.DeleteAsync(CurrentLink.DeleteThe + "?id=" + id).Result;
+        }
+
+        public HttpResponseMessage DeleteMulti(string listId)
+        {
+            return _client.DeleteAsync(CurrentLink.DeleteMultiThe + "?listId=" + listId).Result;
+        }
+
+        public HttpResponseMessage GetAll()
+        {
+            return _client.GetAsync(CurrentLink.GetAllThe).Result;
+        }
+
+        public HttpResponseMessage Update(The the)
+        {
+            return _client.PutAsJsonAsync(CurrentLink.UpdateThe, the).Result;
         }
     }
 }

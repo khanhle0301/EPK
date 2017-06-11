@@ -17,7 +17,9 @@ namespace EPK.Web.Mappings
             Mapper.CreateMap<ApplicationUser, ApplicationUserViewModel>();
             Mapper.CreateMap<GiaHan, GiaHanViewModel>();
             Mapper.CreateMap<DmNhanVien, DmNhanVienViewModel>();
+            Mapper.CreateMap<DmVeThang, DmVeThangViewModel>();
             Mapper.CreateMap<NhanVien, NhanVienViewModel>();
+            Mapper.CreateMap<The, TheViewModel>();
         }
     }
 }

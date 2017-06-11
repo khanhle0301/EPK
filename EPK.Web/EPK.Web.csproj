@@ -214,6 +214,7 @@
     <Compile Include="Controllers\ApplicationGroupController.cs" />
     <Compile Include="Controllers\ApplicationUserController.cs" />
     <Compile Include="Controllers\DmNhanVienController.cs" />
+    <Compile Include="Controllers\DmVeThangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NhanVienController.cs" />
     <Compile Include="Controllers\TheController.cs" />
@@ -229,6 +230,7 @@
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
     <Compile Include="Models\ApplicationUserViewModel.cs" />
     <Compile Include="Models\DmNhanVienViewModel.cs" />
+    <Compile Include="Models\DmVeThangViewModel.cs" />
     <Compile Include="Models\GiaHanViewModel.cs" />
     <Compile Include="Models\NhanVienViewModel.cs" />
     <Compile Include="Models\TheViewModel.cs" />
@@ -260,6 +262,13 @@
     <Content Include="app\components\dmnhanviens\dmnhanvienAddView.html" />
     <Content Include="app\components\dmnhanviens\dmnhanvienEditController.js" />
     <Content Include="app\components\dmnhanviens\dmnhanvienEditView.html" />
+    <Content Include="app\components\dmvethangs\dmvethangAddController.js" />
+    <Content Include="app\components\dmvethangs\dmvethangAddView.html" />
+    <Content Include="app\components\dmvethangs\dmvethangEditController.js" />
+    <Content Include="app\components\dmvethangs\dmvethangEditView.html" />
+    <Content Include="app\components\dmvethangs\dmvethangListController.js" />
+    <Content Include="app\components\dmvethangs\dmvethangListView.html" />
+    <Content Include="app\components\dmvethangs\dmvethangs.module.js" />
     <Content Include="app\components\home\homeController.js" />
     <Content Include="app\components\home\homeView.html" />
     <Content Include="app\components\home\rootController.js" />

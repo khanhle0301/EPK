@@ -70,6 +70,15 @@ namespace EPK.Data.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /api/dmvethang/create.
+        /// </summary>
+        public static string AddDmVeThang {
+            get {
+                return ResourceManager.GetString("AddDmVeThang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /api/nhanvien/create.
         /// </summary>
         public static string AddNhanVien {
@@ -97,11 +106,29 @@ namespace EPK.Data.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /api/dmvethang/delete.
+        /// </summary>
+        public static string DeleteDmVeThang {
+            get {
+                return ResourceManager.GetString("DeleteDmVeThang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /api/dmnhanvien/deletemulti.
         /// </summary>
         public static string DeleteMultiDmNhanVien {
             get {
                 return ResourceManager.GetString("DeleteMultiDmNhanVien", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/dmvethang/deletemulti.
+        /// </summary>
+        public static string DeleteMultiDmVeThang {
+            get {
+                return ResourceManager.GetString("DeleteMultiDmVeThang", resourceCulture);
             }
         }
         
@@ -115,6 +142,15 @@ namespace EPK.Data.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /api/the/deletemulti.
+        /// </summary>
+        public static string DeleteMultiThe {
+            get {
+                return ResourceManager.GetString("DeleteMultiThe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /api/nhanvien/delete.
         /// </summary>
         public static string DeleteNhanVien {
@@ -124,11 +160,29 @@ namespace EPK.Data.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /api/the/delete.
+        /// </summary>
+        public static string DeleteThe {
+            get {
+                return ResourceManager.GetString("DeleteThe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /api/dmnhanvien/getall.
         /// </summary>
         public static string GetAllDmNhanVien {
             get {
                 return ResourceManager.GetString("GetAllDmNhanVien", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/dmvethang/getall.
+        /// </summary>
+        public static string GetAllDmVeThang {
+            get {
+                return ResourceManager.GetString("GetAllDmVeThang", resourceCulture);
             }
         }
         
@@ -160,6 +214,15 @@ namespace EPK.Data.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /api/dmvethang/getbyid.
+        /// </summary>
+        public static string GetByIdDmVeThang {
+            get {
+                return ResourceManager.GetString("GetByIdDmVeThang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /api/nhanvien/getbyid.
         /// </summary>
         public static string GetByIdNhanVien {
@@ -187,11 +250,29 @@ namespace EPK.Data.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /api/dmvethang/update.
+        /// </summary>
+        public static string UpdateDmVeThang {
+            get {
+                return ResourceManager.GetString("UpdateDmVeThang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /api/nhanvien/update.
         /// </summary>
         public static string UpdateNhanVien {
             get {
                 return ResourceManager.GetString("UpdateNhanVien", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/the/update.
+        /// </summary>
+        public static string UpdateThe {
+            get {
+                return ResourceManager.GetString("UpdateThe", resourceCulture);
             }
         }
     }

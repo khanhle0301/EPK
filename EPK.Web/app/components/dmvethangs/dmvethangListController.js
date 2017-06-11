@@ -1,18 +1,18 @@
 ﻿(function (app) {
-    app.controller('theListController', theListController);
+    app.controller('dmvethangListController', dmvethangListController);
 
-    theListController.$inject = ['$scope', 'apiService', 'notificationService', '$ngBootbox', '$filter'];
+    dmvethangListController.$inject = ['$scope', 'apiService', 'notificationService', '$ngBootbox', '$filter'];
 
-    function theListController($scope, apiService, notificationService, $ngBootbox, $filter) {
+    function dmvethangListController($scope, apiService, notificationService, $ngBootbox, $filter) {
         $scope.loading = true;
         $scope.data = [];
         $scope.page = 0;
         $scope.pageCount = 0;
         $scope.totalCount = 0;
 
-        $scope.getThes = getThes;
+        $scope.getDmVeThangs = getDmVeThangs;
 
-        $scope.deleteThe = deleteThe;
+        $scope.deleteDmNhanVien = deleteDmNhanVien;
         $scope.selectAll = selectAll;
         $scope.deleteMultiple = deleteMultiple;
 
@@ -27,9 +27,9 @@
                         listId: JSON.stringify(listId)
                     }
                 }
-                apiService.del('api/the/deletemulti', config, function (result) {
+                apiService.del('api/dmvethang/deletemulti', config, function (result) {
                     notificationService.displaySuccess('Xóa thành công ' + result.data + ' bản ghi.');
-                    getThes();
+                    getDmVeThangs();
                 }, function (error) {
                     notificationService.displayError('Xóa không thành công');
                 });
@@ -61,18 +61,18 @@
             }
         }, true);
 
-        function deleteThe(id) {
+        function deleteDmNhanVien(id) {
             $ngBootbox.confirm('Bạn có chắc muốn xóa?').then(function () {
                 var config = {
                     params: {
                         id: id
                     }
                 }
-                apiService.del('api/the/delete',
+                apiService.del('api/dmvethang/delete',
                     config,
                     function () {
                         notificationService.displaySuccess('Xóa thành công');
-                        getThes();
+                        getDmVeThangs();
                     },
                     function () {
                         notificationService.displayError('Xóa không thành công');
@@ -80,7 +80,8 @@
             });
         }
 
-        function getThes(page) {
+
+        function getDmVeThangs(page) {
             $scope.loading = true;
             page = page || 0;
             var config = {
@@ -89,11 +90,14 @@
                     pageSize: 5
                 }
             }
-            apiService.get('api/the/getall',
+            apiService.get('api/dmvethang/getall',
                 config, dataLoadCompleted, dataLoadFailed);
         }
 
         function dataLoadCompleted(result) {
+            if (result.data.TotalCount === 0) {
+                notificationService.displayWarning('Không có bản ghi nào được tìm thấy.');
+            }
             $scope.data = result.data.Items;
             $scope.page = result.data.Page;
             $scope.pagesCount = result.data.TotalPages;
@@ -104,6 +108,6 @@
             notificationService.displayError(response.data.Message);
         }
 
-        $scope.getThes();
+        $scope.getDmVeThangs();
     }
-})(angular.module('epk.thes'));
+})(angular.module('epk.dmvethangs'));
