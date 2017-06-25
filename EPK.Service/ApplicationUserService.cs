@@ -1,16 +1,17 @@
 ﻿using EPK.Common;
+using EPK.Data.Common;
 using EPK.Data.Models;
+using EPK.Data.Resources;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using EPK.Data.Common;
 
 namespace EPK.Service
 {
     public interface IApplicationUserService
     {
-        IEnumerable<ApplicationUser> GetAll(string path);
+        IEnumerable<ApplicationUser> GetAll();
     }
 
     public class ApplicationUserService : IApplicationUserService
@@ -26,10 +27,10 @@ namespace EPK.Service
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", CommonConstants.Token);
         }
 
-        public IEnumerable<ApplicationUser> GetAll(string path)
+        public IEnumerable<ApplicationUser> GetAll()
         {
             IEnumerable<ApplicationUser> appUser = null;
-            HttpResponseMessage response = _client.GetAsync(path).Result;
+            HttpResponseMessage response = _client.GetAsync(CurrentLink.ApplicationUser).Result;
             if (response.IsSuccessStatusCode)
             {
                 appUser = response.Content.ReadAsAsync<IEnumerable<ApplicationUser>>().Result;

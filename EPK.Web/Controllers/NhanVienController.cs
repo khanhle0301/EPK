@@ -30,6 +30,28 @@ namespace EPK.Web.Controllers
             _nhanVienService = nhanVienService;
         }
 
+        [Route("getall")]
+        [HttpGet]
+        public HttpResponseMessage GetAll(HttpRequestMessage request)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                var result = _nhanVienService.GetAll();
+                if (!result.IsSuccessStatusCode)
+                {
+                    return request.CreateErrorResponse(result.StatusCode, result.Content.ReadAsStringAsync().Result);
+                }
+
+                var model = result.Content.ReadAsAsync<IEnumerable<NhanVien>>().Result;
+
+                IEnumerable<NhanVienViewModel> modelVm = Mapper.Map<IEnumerable<NhanVien>, IEnumerable<NhanVienViewModel>>(model);
+
+                var response = request.CreateResponse(HttpStatusCode.OK, modelVm);
+
+                return response;
+            });
+        }
+
         /// <summary>
         ///
         /// </summary>
@@ -37,7 +59,7 @@ namespace EPK.Web.Controllers
         /// <param name="page"></param>
         /// <param name="pageSize"></param>
         /// <returns></returns>
-        [Route("getall")]
+        [Route("getlistpaging")]
         [HttpGet]
         public HttpResponseMessage GetAll(HttpRequestMessage request, int page, int pageSize = 10)
         {
@@ -178,7 +200,6 @@ namespace EPK.Web.Controllers
             });
         }
 
-       
         [Route("deletemulti")]
         [HttpDelete]
         public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string listId)

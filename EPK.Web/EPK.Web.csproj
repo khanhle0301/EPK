@@ -108,6 +108,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
       <Private>True</Private>
@@ -123,6 +128,9 @@
     <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>E:\eparking2017\Framework\Microsoft.TeamFoundation.Common.dll</HintPath>
     </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
@@ -203,6 +211,7 @@
   <ItemGroup>
     <Folder Include="Assets\libs\checklist-model\test\" />
     <Folder Include="Infrastructure\Extensions\" />
+    <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -216,6 +225,7 @@
     <Compile Include="Controllers\DmNhanVienController.cs" />
     <Compile Include="Controllers\DmVeThangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MayTinhController.cs" />
     <Compile Include="Controllers\NhanVienController.cs" />
     <Compile Include="Controllers\TheController.cs" />
     <Compile Include="Controllers\ThongKeController.cs" />
@@ -233,11 +243,17 @@
     <Compile Include="Models\DmNhanVienViewModel.cs" />
     <Compile Include="Models\DmVeThangViewModel.cs" />
     <Compile Include="Models\GiaHanViewModel.cs" />
+    <Compile Include="Models\MayTinhViewModel.cs" />
     <Compile Include="Models\NhanVienViewModel.cs" />
     <Compile Include="Models\RaViewModel.cs" />
     <Compile Include="Models\TheViewModel.cs" />
     <Compile Include="Models\ThongKeNhanViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
@@ -927,6 +943,18 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\audio_expired.wav" />
+    <Content Include="Resources\audio_goodbye.wav" />
+    <Content Include="Resources\audio_goodbye_short.wav" />
+    <Content Include="Resources\audio_welcome.wav" />
+    <Content Include="Resources\audio_welcome_short.wav" />
+    <Content Include="Resources\beep.wav" />
+    <Content Include="Resources\bg_messagebox.jpg" />
+    <Content Include="Resources\cloud-eparking-small.png" />
+    <Content Include="Resources\eParking_Logo_Square.png" />
+    <Content Include="Resources\eParking_Logo_Square_Background.png" />
+    <Content Include="Resources\LOGO-CLOUDPARKING.jpg" />
+    <Content Include="Resources\logo_apv.bmp" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1228,6 +1256,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppSettings.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ThongKe_Nhanh.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\%24this.Icon" />
+    <Content Include="Resources\BaoCaoPhuongTien.xlsx" />
+    <Content Include="Resources\DanhSachGiaHan.xlsx" />
+    <Content Include="Resources\DanhSachVeThang.xlsx" />
+    <Content Include="Resources\LichSu.xlsx" />
+    <Content Include="Resources\ThongKe.xlsx" />
+    <Content Include="Resources\ThongKe_TongQuat.xlsx" />
+    <Content Include="Resources\VeThang.xlsx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

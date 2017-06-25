@@ -31,11 +31,11 @@
                     </div>
 
                     <button class="btn btn-default" ng-click="search()">Thống kê</button>
-                    <button class="btn btn-default" ng-click="search2()">Xuất Excel</button>
+                    <button class="btn btn-default" id="btnExport" ng-click="exportExcel()" disabled>Xuất Excel</button>
 
                     <div class="input-group pull-right">
-                        <input type="checkbox" name="vehicle" checked ng-model="xethang"> Xe tháng
-                        <input type="checkbox" name="vehicle" checked ng-model="vanglai"> Xe vãng lai
+                        <input type="checkbox" name="vehicle" value="xethang" checked ng-model="xethang"> Xe tháng
+                        <input type="checkbox" name="vehicle" value="vanglai" checked ng-model="vanglai"> Xe vãng lai
                     </div>
                 </form>
             </di>

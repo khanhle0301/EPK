@@ -117,82 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddDmNhanVien" xml:space="preserve">
-    <value>/api/dmnhanvien/create</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BaoCaoPhuongTien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BaoCaoPhuongTien.xlsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="AddDmVeThang" xml:space="preserve">
-    <value>/api/dmvethang/create</value>
+  <data name="ThongKe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThongKe.xlsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="AddNhanVien" xml:space="preserve">
-    <value>/api/nhanvien/create</value>
+  <data name="ThongKe_Nhanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThongKe_Nhanh.xlsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ApplicationUser" xml:space="preserve">
-    <value>/api/applicationUser/getall</value>
+  <data name="ThongKe_TongQuat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThongKe_TongQuat.xlsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="DeleteDmNhanVien" xml:space="preserve">
-    <value>/api/dmnhanvien/delete</value>
+  <data name="DanhSachGiaHan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DanhSachGiaHan.xlsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="DeleteDmVeThang" xml:space="preserve">
-    <value>/api/dmvethang/delete</value>
+  <data name="LichSu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LichSu.xlsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="DeleteMultiDmNhanVien" xml:space="preserve">
-    <value>/api/dmnhanvien/deletemulti</value>
+  <data name="VeThang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VeThang.xlsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="DeleteMultiDmVeThang" xml:space="preserve">
-    <value>/api/dmvethang/deletemulti</value>
-  </data>
-  <data name="DeleteMultiNhanVien" xml:space="preserve">
-    <value>/api/nhanvien/deletemulti</value>
-  </data>
-  <data name="DeleteMultiThe" xml:space="preserve">
-    <value>/api/the/deletemulti</value>
-  </data>
-  <data name="DeleteNhanVien" xml:space="preserve">
-    <value>/api/nhanvien/delete</value>
-  </data>
-  <data name="DeleteThe" xml:space="preserve">
-    <value>/api/the/delete</value>
-  </data>
-  <data name="GetAllDmNhanVien" xml:space="preserve">
-    <value>/api/dmnhanvien/getall</value>
-  </data>
-  <data name="GetAllDmVeThang" xml:space="preserve">
-    <value>/api/dmvethang/getall</value>
-  </data>
-  <data name="GetAllMayTinh" xml:space="preserve">
-    <value>/api/maytinh/getall</value>
-  </data>
-  <data name="GetAllNhanVien" xml:space="preserve">
-    <value>/api/nhanvien/getall</value>
-  </data>
-  <data name="GetAllThe" xml:space="preserve">
-    <value>/api/the/getall</value>
-  </data>
-  <data name="GetByIdDmNhanVien" xml:space="preserve">
-    <value>/api/dmnhanvien/getbyid</value>
-  </data>
-  <data name="GetByIdDmVeThang" xml:space="preserve">
-    <value>/api/dmvethang/getbyid</value>
-  </data>
-  <data name="GetByIdNhanVien" xml:space="preserve">
-    <value>/api/nhanvien/getbyid</value>
-  </data>
-  <data name="ThongKeGiaHan" xml:space="preserve">
-    <value>/api/giahan/thongkengay</value>
-  </data>
-  <data name="ThongKeNhanh" xml:space="preserve">
-    <value>api/ra/thongkengay</value>
-  </data>
-  <data name="UpdateDmNhanVien" xml:space="preserve">
-    <value>/api/dmnhanvien/update</value>
-  </data>
-  <data name="UpdateDmVeThang" xml:space="preserve">
-    <value>/api/dmvethang/update</value>
-  </data>
-  <data name="UpdateNhanVien" xml:space="preserve">
-    <value>/api/nhanvien/update</value>
-  </data>
-  <data name="UpdateThe" xml:space="preserve">
-    <value>/api/the/update</value>
+  <data name="DanhSachVeThang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DanhSachVeThang.xlsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

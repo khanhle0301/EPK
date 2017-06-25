@@ -9,5 +9,7 @@
         /// 
         /// </summary>
         public static string Token;
+
+        public const string SessionData = "SessionData";
     }
 }

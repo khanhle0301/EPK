@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using EPK.Data.Resources;
 
 namespace EPK.Web.Controllers
 {
@@ -37,13 +36,13 @@ namespace EPK.Web.Controllers
         /// <param name="page"></param>
         /// <param name="pageSize"></param>
         /// <returns></returns>
-        [Route("getall")]
+        [Route("getlistpaging")]
         [HttpGet]
         public HttpResponseMessage GetListPaging(HttpRequestMessage request, int page, int pageSize)
         {
             return CreateHttpResponse(request, () =>
             {
-                var model = _appUser.GetAll(CurrentLink.ApplicationUser);
+                var model = _appUser.GetAll();
                 var modelVm = Mapper.Map<IEnumerable<ApplicationUser>, IEnumerable<ApplicationUserViewModel>>(model);
 
                 int totalRow = 0;
@@ -56,6 +55,21 @@ namespace EPK.Web.Controllers
                 };
 
                 var response = request.CreateResponse(HttpStatusCode.OK, pagedSet);
+
+                return response;
+            });
+        }
+
+        [Route("getall")]
+        [HttpGet]
+        public HttpResponseMessage GetListPaging(HttpRequestMessage request)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                var model = _appUser.GetAll();
+                var modelVm = Mapper.Map<IEnumerable<ApplicationUser>, IEnumerable<ApplicationUserViewModel>>(model);
+
+                var response = request.CreateResponse(HttpStatusCode.OK, modelVm);
 
                 return response;
             });

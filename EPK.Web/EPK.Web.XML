@@ -253,7 +253,7 @@
              <param name="toDate"></param>
              <returns></returns>
         </member>
-        <member name="M:EPK.Web.Controllers.ThongKeNhanhController.#ctor(EPK.Service.IThongKeNhanhService,EPK.Service.IGiaHanService)">
+        <member name="M:EPK.Web.Controllers.ThongKeNhanhController.#ctor(EPK.Service.IThongKeNhanhService,EPK.Service.IGiaHanService,EPK.Service.IMayTinhService)">
              <summary>
             
              </summary>
@@ -332,6 +332,62 @@
              <summary>
             
              </summary>
+        </member>
+        <member name="T:EPK.Web.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:EPK.Web.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:EPK.Web.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:EPK.Web.Properties.Resources.BaoCaoPhuongTien">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:EPK.Web.Properties.Resources.DanhSachGiaHan">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:EPK.Web.Properties.Resources.DanhSachVeThang">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:EPK.Web.Properties.Resources.LichSu">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:EPK.Web.Properties.Resources.ThongKe">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:EPK.Web.Properties.Resources.ThongKe_Nhanh">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:EPK.Web.Properties.Resources.ThongKe_TongQuat">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:EPK.Web.Properties.Resources.VeThang">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
         </member>
     </members>
 </doc>

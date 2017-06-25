@@ -187,6 +187,15 @@ namespace EPK.Data.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /api/maytinh/getall.
+        /// </summary>
+        public static string GetAllMayTinh {
+            get {
+                return ResourceManager.GetString("GetAllMayTinh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /api/nhanvien/getall.
         /// </summary>
         public static string GetAllNhanVien {

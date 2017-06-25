@@ -6,6 +6,7 @@
     function thongkenhanhtatcaListController($scope, apiService, notificationService) {
         $scope.loading = true;
         $scope.data = [];
+
         $scope.page = 0;
         $scope.pageCount = 0;
         $scope.totalCount = 0;
@@ -19,6 +20,25 @@
         $scope.vanglai = true;
 
         $scope.search = search;
+        $scope.exportExcel = exportExcel;
+
+        function exportExcel() {
+            var config = {
+                params: {
+                    batDau: convert($scope.batDau),
+                    ketThuc: convert($scope.ketThuc)
+                }
+            }
+            apiService.get('/api/thongkenhanh/ExportXls', config, function (response) {
+                if (response.status = 200) {
+                    window.location.href = response.data.Message;
+                }
+            }, function (error) {
+                notificationService.displayError(error);
+
+            });
+        }
+
 
         $scope.getThongKes = getThongKes;
 
@@ -28,7 +48,6 @@
                 day = ("0" + date.getDate()).slice(-2);
             return [date.getFullYear(), mnth, day].join("-");
         }
-
 
         function getThongKes(page) {
             $scope.loading = true;
@@ -41,17 +60,26 @@
                     ketThuc: convert($scope.ketThuc),
                     vanglai: $scope.vanglai,
                     thang: $scope.xethang,
-                    sort: $scope.sort
+                    sort: $scope.sort,
+                    maytinh: '',
+                    nhanvien: ''
                 }
             }
             apiService.get('api/thongkenhanh/getall?page=' + config.param.page + '&pageSize=' + config.param.pageSize + '&batDau='
-                + config.param.batDau + '&ketThuc=' + config.param.ketThuc + '&vanglai=' +
-                config.param.vanglai + '&thang=' + config.param.thang + '&sort=' + config.param.sort,
+                + config.param.batDau + '&ketThuc=' + config.param.ketThuc + '&vanglai=' + config.param.vanglai + '&thang=' +
+                config.param.thang + '&sort=' + config.param.sort + '&maytinh=' + config.param.maytinh + '&nhanvien=' + config.param.nhanvien,
                 null, dataLoadCompleted, dataLoadFailed);
         }
 
         function dataLoadCompleted(result) {
             $scope.data = result.data.Items;
+            if (result.data.TotalCount > 0) {
+                $('#btnExport').removeAttr('disabled');
+            }
+            else {
+                $('#btnExport').attr('disabled', 'disabled');
+            }
+
             $scope.page = result.data.Page;
             $scope.pagesCount = result.data.TotalPages;
             $scope.totalCount = result.data.TotalCount;
@@ -64,7 +92,5 @@
         function search() {
             getThongKes();
         }
-
-        //$scope.getThongKes();
     }
 })(angular.module('epk.thongkenhanhs'));

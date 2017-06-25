@@ -15,20 +15,27 @@
             <di class="row">
                 <form class="form-inline">
                     <div class="input-group">
+                        <select class="form-control" ng-model="sort">
+                            <option value="ngay" selected>Theo ngày</option>
+                            <option value="thang">Theo tháng</option>
+                            <option value="nam">Theo năm</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
                         <div class="input-group-addon">Từ</div>
-                        <input type="date" name="batDau" as-date value="01/01/2015" class="form-control" required ng-model="batDau">
+                        <input type="date" name="batDau" class="form-control" required ng-model="batDau">
                     </div>
                     <div class="input-group">
                         <div class="input-group-addon">Đến</div>
-                        <input type="date" name="ketThuc" as-date value="01/01/2020" class="form-control" required ng-model="ketThuc">
+                        <input type="date" name="ketThuc" class="form-control" required ng-model="ketThuc">
                     </div>
 
-                    <button class="btn btn-default" ng-click="search()">Thống kê</button>
-                    <button class="btn btn-default" ng-click="search2()">Xuất Excel</button>
+                    <button class="btn btn-default" id="btnThongKe" ng-click="search()" disabled>Thống kê</button>
+                    <button class="btn btn-default" ng-click="export()">Xuất Excel</button>
 
                     <div class="input-group pull-right">
-                        <input type="checkbox" name="vehicle" checked value="xethang"> Xe tháng
-                        <input type="checkbox" name="vehicle" checked value="xevanglai"> Xe vãng lai
+                        <input type="checkbox" name="vehicle" value="xethang" checked ng-model="xethang"> Xe tháng
+                        <input type="checkbox" name="vehicle" value="vanglai" checked ng-model="vanglai"> Xe vãng lai
                     </div>
                 </form>
             </di>
@@ -37,15 +44,11 @@
                     <table class="table table-bordered">
                         <tr>
                             <td><input name="all" type="checkbox" ng-click="selectAll()" /></td>
-                            <th style="width: 100%">Tên</th>
+                            <th>Tên</th>
                         </tr>
-                        <tr>
-                            <td><input type="checkbox" name="all" /></td>
-                            <th><a ui-sref="#">abc</a></th>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="all" /></td>
-                            <th><a ui-sref="#">abc</a></th>
+                        <tr ng-repeat="item in maytinh">
+                            <td><input type="checkbox" ng-model="item.checked" name="all" /></td>
+                            <td>{{item.Id}}</td>
                         </tr>
                     </table>
                 </div>
