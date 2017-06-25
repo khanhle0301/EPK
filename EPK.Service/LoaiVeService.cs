@@ -1,24 +1,22 @@
 ﻿using EPK.Common;
 using EPK.Data.Common;
-using EPK.Data.Models;
 using EPK.Data.Resources;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
 namespace EPK.Service
 {
-    public interface IApplicationUserService
+    public interface ILoaiVeService
     {
         HttpResponseMessage GetAll();
     }
 
-    public class ApplicationUserService : IApplicationUserService
+    internal class LoaiVeService : ILoaiVeService
     {
         private readonly HttpClient _client;
 
-        public ApplicationUserService()
+        public LoaiVeService()
         {
             _client = new HttpClient
             {
@@ -29,7 +27,7 @@ namespace EPK.Service
 
         public HttpResponseMessage GetAll()
         {
-            return _client.GetAsync(CurrentLink.ApplicationUser).Result;
+            return _client.GetAsync(CurrentLink.GetAllLoaiVe).Result;
         }
     }
 }

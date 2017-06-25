@@ -187,6 +187,24 @@ namespace EPK.Data.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /api/loaive/getall.
+        /// </summary>
+        public static string GetAllLoaiVe {
+            get {
+                return ResourceManager.GetString("GetAllLoaiVe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/loaixe/getall.
+        /// </summary>
+        public static string GetAllLoaiXe {
+            get {
+                return ResourceManager.GetString("GetAllLoaiXe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /api/maytinh/getall.
         /// </summary>
         public static string GetAllMayTinh {
@@ -237,6 +255,24 @@ namespace EPK.Data.Resources {
         public static string GetByIdNhanVien {
             get {
                 return ResourceManager.GetString("GetByIdNhanVien", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/vao/timkiem.
+        /// </summary>
+        public static string GetTimKiem {
+            get {
+                return ResourceManager.GetString("GetTimKiem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to api/ra/thongkengay.
+        /// </summary>
+        public static string ThongKeChiTiet {
+            get {
+                return ResourceManager.GetString("ThongKeChiTiet", resourceCulture);
             }
         }
         

@@ -1,24 +1,22 @@
 ﻿using EPK.Common;
 using EPK.Data.Common;
-using EPK.Data.Models;
 using EPK.Data.Resources;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
 namespace EPK.Service
 {
-    public interface IApplicationUserService
+    public interface IThongKeChiTietService
     {
-        HttpResponseMessage GetAll();
+        HttpResponseMessage GetAll(string batDau, string ketThuc);
     }
 
-    public class ApplicationUserService : IApplicationUserService
+    internal class ThongKeChiTietService : IThongKeChiTietService
     {
         private readonly HttpClient _client;
 
-        public ApplicationUserService()
+        public ThongKeChiTietService()
         {
             _client = new HttpClient
             {
@@ -27,9 +25,9 @@ namespace EPK.Service
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", CommonConstants.Token);
         }
 
-        public HttpResponseMessage GetAll()
+        public HttpResponseMessage GetAll(string batDau, string ketThuc)
         {
-            return _client.GetAsync(CurrentLink.ApplicationUser).Result;
+            return _client.GetAsync(CurrentLink.ThongKeChiTiet + "?batDau=" + batDau + "&ketThuc=" + ketThuc).Result;
         }
     }
 }

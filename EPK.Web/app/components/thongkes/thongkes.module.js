@@ -13,11 +13,5 @@
                 templateUrl: "/app/components/thongkes/thongkegiahanListView.html",
                 controller: "thongkegiahanListController"
             })
-            .state('thongkechitiets', {
-                url: "/thongkechitiets",
-                parent: 'base',
-                templateUrl: "/app/components/thongkes/thongkechitietListView.html",
-                controller: "thongkechitietListController"
-            });
     }
 })();

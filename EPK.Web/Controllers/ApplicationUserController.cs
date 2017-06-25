@@ -40,39 +40,42 @@ namespace EPK.Web.Controllers
         [HttpGet]
         public HttpResponseMessage GetListPaging(HttpRequestMessage request, int page, int pageSize)
         {
-            return CreateHttpResponse(request, () =>
-            {
-                var model = _appUser.GetAll();
-                var modelVm = Mapper.Map<IEnumerable<ApplicationUser>, IEnumerable<ApplicationUserViewModel>>(model);
+            //return CreateHttpResponse(request, () =>
+            //{
+            //    var model = _appUser.GetAll();
+            //    var modelVm = Mapper.Map<IEnumerable<ApplicationUser>, IEnumerable<ApplicationUserViewModel>>(model);
 
-                int totalRow = 0;
-                PaginationSet<ApplicationUserViewModel> pagedSet = new PaginationSet<ApplicationUserViewModel>()
-                {
-                    Page = page,
-                    TotalCount = totalRow,
-                    TotalPages = (int)Math.Ceiling((decimal)totalRow / pageSize),
-                    Items = modelVm
-                };
+            //    int totalRow = 0;
+            //    PaginationSet<ApplicationUserViewModel> pagedSet = new PaginationSet<ApplicationUserViewModel>()
+            //    {
+            //        Page = page,
+            //        TotalCount = totalRow,
+            //        TotalPages = (int)Math.Ceiling((decimal)totalRow / pageSize),
+            //        Items = modelVm
+            //    };
 
-                var response = request.CreateResponse(HttpStatusCode.OK, pagedSet);
+            //    var response = request.CreateResponse(HttpStatusCode.OK, pagedSet);
 
-                return response;
-            });
+            //    return response;
+            //});
+            return null;
         }
 
         [Route("getall")]
         [HttpGet]
         public HttpResponseMessage GetListPaging(HttpRequestMessage request)
         {
-            return CreateHttpResponse(request, () =>
-            {
-                var model = _appUser.GetAll();
-                var modelVm = Mapper.Map<IEnumerable<ApplicationUser>, IEnumerable<ApplicationUserViewModel>>(model);
+            //return CreateHttpResponse(request, () =>
+            //{
+            //    var model = _appUser.GetAll();
+            //    var modelVm = Mapper.Map<IEnumerable<ApplicationUser>, IEnumerable<ApplicationUserViewModel>>(model);
 
-                var response = request.CreateResponse(HttpStatusCode.OK, modelVm);
+            //    var response = request.CreateResponse(HttpStatusCode.OK, modelVm);
 
-                return response;
-            });
+            //    return response;
+            //});
+
+            return null;
         }
     }
 }

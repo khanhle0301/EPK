@@ -159,6 +159,12 @@
   <data name="GetAllDmVeThang" xml:space="preserve">
     <value>/api/dmvethang/getall</value>
   </data>
+  <data name="GetAllLoaiVe" xml:space="preserve">
+    <value>/api/loaive/getall</value>
+  </data>
+  <data name="GetAllLoaiXe" xml:space="preserve">
+    <value>/api/loaixe/getall</value>
+  </data>
   <data name="GetAllMayTinh" xml:space="preserve">
     <value>/api/maytinh/getall</value>
   </data>
@@ -176,6 +182,12 @@
   </data>
   <data name="GetByIdNhanVien" xml:space="preserve">
     <value>/api/nhanvien/getbyid</value>
+  </data>
+  <data name="GetTimKiem" xml:space="preserve">
+    <value>/api/vao/timkiem</value>
+  </data>
+  <data name="ThongKeChiTiet" xml:space="preserve">
+    <value>api/ra/thongkengay</value>
   </data>
   <data name="ThongKeGiaHan" xml:space="preserve">
     <value>/api/giahan/thongkengay</value>

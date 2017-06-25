@@ -47,7 +47,7 @@ namespace EPK.Web.Controllers
         {
             return CreateHttpResponse(request, () =>
             {
-                HttpContext.Current.Session[CommonConstants.SessionData] = new List<ThongKeNhanViewModel>();
+                HttpContext.Current.Session[CommonConstants.SessionThongKeNhanh] = new List<ThongKeNhanViewModel>();
 
                 DateTime _batdau = Convert.ToDateTime(batDau);
                 DateTime _ketthuc = Convert.ToDateTime(ketThuc);
@@ -252,7 +252,7 @@ namespace EPK.Web.Controllers
                     Items = query
                 };
 
-                HttpContext.Current.Session[CommonConstants.SessionData] = listData;
+                HttpContext.Current.Session[CommonConstants.SessionThongKeNhanh] = listData;
 
                 var response = request.CreateResponse(HttpStatusCode.OK, pagedSet);
 
@@ -269,7 +269,7 @@ namespace EPK.Web.Controllers
                 HttpResponseMessage response;
                 try
                 {
-                    string fileName = string.Concat("Product_" + DateTime.Now.ToString("yyyyMMddhhmmsss") + ".xlsx");
+                    string fileName = string.Concat("ThongKeNhanh_" + DateTime.Now.ToString("yyyyMMddhhmmsss") + ".xlsx");
                     var folderReport = ConfigHelper.GetByKey("ReportFolder");
                     string filePath = HttpContext.Current.Server.MapPath(folderReport);
                     if (!Directory.Exists(filePath))
@@ -303,18 +303,13 @@ namespace EPK.Web.Controllers
                 DateTime _ketthuc = Convert.ToDateTime(ketThuc);
 
                 xlWorksheet.Cells[4, 1] = "Từ ngày " + _batdau.ToString("dd/MM/yyyy") + " đến ngày " + _ketthuc.ToString("dd/MM/yyyy");
-                try
-                {
-                    Customer customer = new Customer { Name = "bac", Address = "bac" };
-                    xlWorksheet.Cells[1, 1] = customer.Name;
-                    xlWorksheet.Cells[2, 1] = customer.Address;
-                }
-                catch (Exception e)
-                {
-                }
+
+                xlWorksheet.Cells[1, 1] = "Địa chỉ: 279/006C Âu Cơ, P.5, Q.11, Tp.HCM, Việt Nam";
+                xlWorksheet.Cells[2, 1] = "Tên: Cty An Phu Viet";
+
                 int rowindex = 0;
 
-                var listData = (List<ThongKeNhanViewModel>)HttpContext.Current.Session[CommonConstants.SessionData];
+                var listData = (List<ThongKeNhanViewModel>)HttpContext.Current.Session[CommonConstants.SessionThongKeNhanh];
 
                 var data = new object[listData.Count, 4];
                 foreach (var item in listData)
@@ -346,12 +341,6 @@ namespace EPK.Web.Controllers
             catch (Exception ex)
             {
             }
-        }
-
-        public class Customer
-        {
-            public string Name { get; set; }
-            public string Address { get; set; }
         }
     }
 }

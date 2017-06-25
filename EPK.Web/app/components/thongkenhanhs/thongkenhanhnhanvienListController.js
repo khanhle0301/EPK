@@ -11,8 +11,8 @@
         $scope.pageCount = 0;
         $scope.totalCount = 0;
 
-        $scope.batDau = new Date(2015, 01, 01);
-        $scope.ketThuc = new Date(2020, 01, 01);
+        $scope.batDau = new Date();
+        $scope.ketThuc = new Date();
 
         $scope.sort = 'ngay';
 
@@ -22,8 +22,25 @@
         $scope.search = search;
 
         $scope.getThongKes = getThongKes;
-
+        $scope.exportExcel = exportExcel;
         $scope.getMayTinhs = getMayTinhs;
+
+        function exportExcel() {
+            var config = {
+                params: {
+                    batDau: convert($scope.batDau),
+                    ketThuc: convert($scope.ketThuc)
+                }
+            }
+            apiService.get('/api/thongkenhanh/ExportXls', config, function (response) {
+                if (response.status = 200) {
+                    window.location.href = response.data.Message;
+                }
+            }, function (error) {
+                notificationService.displayError(error);
+
+            });
+        }
 
         function convert(str) {
             var date = new Date(str),
@@ -77,7 +94,7 @@
             });
 
             var config = {
-                param: {
+                params: {
                     page: page,
                     pageSize: 10,
                     batDau: convert($scope.batDau),
@@ -89,14 +106,17 @@
                     nhanvien: JSON.stringify(listId)
                 }
             }
-            apiService.get('api/thongkenhanh/getall?page=' + config.param.page + '&pageSize=' + config.param.pageSize + '&batDau='
-                + config.param.batDau + '&ketThuc=' + config.param.ketThuc + '&vanglai=' + config.param.vanglai + '&thang=' +
-                config.param.thang + '&sort=' + config.param.sort + '&nhanvien=' + config.param.nhanvien + '&maytinh=' + config.param.maytinh,
-                null, dataLoadCompleted, dataLoadFailed);
+            apiService.get('api/thongkenhanh/getall', config, dataLoadCompleted, dataLoadFailed);
         }
 
         function dataLoadCompleted(result) {
             $scope.data = result.data.Items;
+            if (result.data.TotalCount > 0) {
+                $('#btnExport').removeAttr('disabled');
+            }
+            else {
+                $('#btnExport').attr('disabled', 'disabled');
+            }
             $scope.page = result.data.Page;
             $scope.pagesCount = result.data.TotalPages;
             $scope.totalCount = result.data.TotalCount;

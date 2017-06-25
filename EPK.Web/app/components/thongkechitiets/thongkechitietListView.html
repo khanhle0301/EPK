@@ -16,23 +16,23 @@
                 <form class="form-inline">
                     <div class="input-group">
                         <div class="input-group-addon">Từ</div>
-                        <input type="date" class="form-control">
+                        <input type="date" name="batDau" class="form-control" required ng-model="batDau">
                     </div>
                     <div class="input-group">
                         <div class="input-group-addon">Đến</div>
-                        <input type="date" class="form-control">
+                        <input type="date" name="ketThuc" class="form-control" required ng-model="ketThuc">
                     </div>
 
-                    <button class="btn btn-default" ng-click="search()">Thống kê</button>
-                    <button class="btn btn-default" ng-click="search()">Xuất Excel</button>
+                    <button class="btn btn-default" id="btnThongKe" ng-click="search()">Thống kê</button>
+                    <button class="btn btn-default" id="btnExport" data-toggle="modal" data-target="#myModal" disabled>Xuất Excel</button>
 
                     <div class="input-group pull-right">
-                        <input type="checkbox" name="vehicle" value="Bike"> Send mail
-                        <input type="radio" name="gender" value="male" checked> Trong bãi
-                        <input type="radio" name="gender" value="female"> Ngoài bãi
+                        <input type="checkbox" name="vehicle" value="sendmail" ng-model="sendmail"> Send mail
+                        <input type="radio" name="gender" value="trongbai" checked ng-model="trongbai"> Trong bãi
+                        <input type="radio" name="gender" value="ngoaibai" ng-model="trongbai"> Ngoài bãi
 
-                        <input type="checkbox" name="vehicle" checked="" value="Bike"> Xe tháng
-                        <input type="checkbox" name="vehicle" checked value="Bike"> Xe vãng lai
+                        <input type="checkbox" name="vehicle" value="xethang" checked ng-model="xethang"> Xe tháng
+                        <input type="checkbox" name="vehicle" value="vanglai" checked ng-model="vanglai"> Xe vãng lai
                     </div>
                 </form>
             </di>
@@ -40,6 +40,7 @@
                 <div class="col-md-12">
                     <table class="table table-bordered">
                         <tr>
+                            <th>STT</th>
                             <th>Mã thẻ</th>
                             <th>Biển số</th>
                             <th>Giờ vào</th>
@@ -49,111 +50,61 @@
                             <th>Nhân Viên (Vào)</th>
                             <th>Nhân Viên (Ra)</th>
                         </tr>
-                        <tr>
-                            <td>0100BC4E8C</td>
-                            <td>51M3-8678</td>
-                            <td>31/12/2016 12:09</td>
-                            <td>Xe trong bãi </td>
-                            <td>Loại Vé đã xóa</td>
-                            <td>
-                                Vé tháng
-                            </td>
-                            <td>
-                                Quản lý
-                            </td>
+                        <tr ng-repeat="item in data">
+                            <td>{{item.STT}}</td>
+                            <td>{{item.MaThe}}</td>
+                            <td>{{item.BienSo}}</td>
+                            <td>{{item.GioVao}}</td>
+                            <td>{{item.GioRa}}</td>
+                            <td>{{item.GiaVe}}</td>
+                            <td>{{item.LoaiVe}}</td>
+                            <td>{{item.NhanVienVao}}</td>
+                            <td>{{item.NhanVienRa}}</td>
                             <td></td>
-
-                        </tr>
-                        <tr>
-                            <td>02002592D4</td>
-                            <td>51M3-8674</td>
-                            <td>31/12/2016 11:09</td>
-                            <td>Xe trong bãi </td>
-                            <td>Loại Vé đã xóa</td>
-                            <td>
-                                Vé tháng
-                            </td>
-                            <td>
-                                Quản lý
-                            </td>
-                            <td></td>
-
-                        </tr>
-                        <tr>
-                            <td>0110BH4E8C</td>
-                            <td>51M3-8611</td>
-                            <td>31/12/2016 12:19</td>
-                            <td>Xe trong bãi </td>
-                            <td>Loại Vé đã xóa</td>
-                            <td>
-                                Loại Vé đã xóa
-                            </td>
-                            <td>
-                                Quản lý
-                            </td>
-                            <td></td>
-
                         </tr>
                         <tr>
                             <td></td>
                             <td></td>
                             <td style="color: red">Số lượt xe</td>
                             <td></td>
-                            <td style="color: red">3</td>
-                            <td>
-                            </td>
-                            <td>
-                            </td>
+                            <td style="color: red">{{soLuotXe}}</td>
                             <td></td>
-
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td></td>
                             <td></td>
                             <td style="color: red">Xe vãng lai</td>
                             <td></td>
-                            <td style="color: red">1</td>
+                            <td style="color: red">{{xeVangLai}}</td>
                             <td></td>
                             <td></td>
                             <td></td>
-
                         </tr>
-                        <tr>
+                        <tr ng-repeat="item in listXeVangLai">
                             <td></td>
                             <td></td>
-                            <td>- Xe đạp</td>
+                            <td>- {{item.Name}}</td>
                             <td></td>
-                            <td>0</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td>- Xe máy</td>
-                            <td></td>
-                            <td>0</td>
+                            <td>{{item.Count}}</td>
                             <td></td>
                             <td></td>
                             <td></td>
-
                         </tr>
                         <tr>
                             <td></td>
                             <td></td>
                             <td style="color: red">Xe tháng</td>
                             <td></td>
-                            <td style="color: red">2</td>
+                            <td style="color: red">{{xeThang}}</td>
                             <td></td>
                             <td></td>
                             <td></td>
-
                         </tr>
                         <tfoot>
                             <tr>
-                                <td colspan="8"><span class="pull-right">Trang: 1 - Tổng số bản ghi: 3</span></td>
+                                <td colspan="9"><span class="pull-right">Trang: {{page+1}} - Tổng số bản ghi: {{totalCount}}</span></td>
                             </tr>
                         </tfoot>
                     </table>
@@ -167,8 +118,28 @@
                 </div>
             </div>
         </div><!-- /.box-body -->
-        <!--<div class="box-footer clearfix">
+        <div class="box-footer clearfix">
             <pager-directive page="{{page}}" custom-path="{{customPath}}" pages-count="{{pagesCount}}" total-count="{{totalCount}}" search-func="getThongKes(page)"></pager-directive>
-        </div>-->
+        </div>
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Chọn loại Export</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="radio" name="typeExport" value="chitiet" ng-model="type" checked > Chi tiết
+                        <input type="radio" name="typeExport" value="tongquat" ng-model="type"> Tổng quát
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" ng-click="exportExcel()">Xuất Excel</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 </section><!-- /.content -->

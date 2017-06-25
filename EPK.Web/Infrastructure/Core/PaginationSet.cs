@@ -38,5 +38,22 @@ namespace EPK.Web.Infrastructure.Core
         ///
         /// </summary>
         public IEnumerable<T> Items { set; get; }
+
+        public int SoLuotXe { set; get; }
+
+        public int XeVangLai { set; get; }
+
+        public List<ListXe> ListXeVangLai { set; get; }
+
+        public int XeThang { set; get; }
+    }
+
+    public class ListXe
+    {
+        public int Id { set; get; }
+
+        public string Name { set; get; }
+
+        public int Count { set; get; }
     }
 }

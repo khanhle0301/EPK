@@ -52,12 +52,16 @@
     <Compile Include="DmNhanVienService.cs" />
     <Compile Include="DmVeThangService.cs" />
     <Compile Include="GiaHanService.cs" />
+    <Compile Include="LoaiVeService.cs" />
+    <Compile Include="LoaiXeService.cs" />
     <Compile Include="MayTinhService.cs" />
     <Compile Include="NhanVienService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheService.cs" />
+    <Compile Include="ThongKeChiTietService.cs" />
     <Compile Include="ThongKeNhanhService.cs" />
     <Compile Include="ThongKeService.cs" />
+    <Compile Include="VaoService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EPK.Data\EPK.Data.csproj">

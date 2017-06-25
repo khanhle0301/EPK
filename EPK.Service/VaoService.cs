@@ -1,24 +1,22 @@
 ﻿using EPK.Common;
 using EPK.Data.Common;
-using EPK.Data.Models;
 using EPK.Data.Resources;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
 namespace EPK.Service
 {
-    public interface IApplicationUserService
+    public interface IVaoService
     {
-        HttpResponseMessage GetAll();
+        HttpResponseMessage GetTimKiem(string batDau, string ketThuc);
     }
 
-    public class ApplicationUserService : IApplicationUserService
+    public class VaoService : IVaoService
     {
         private readonly HttpClient _client;
 
-        public ApplicationUserService()
+        public VaoService()
         {
             _client = new HttpClient
             {
@@ -27,9 +25,9 @@ namespace EPK.Service
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", CommonConstants.Token);
         }
 
-        public HttpResponseMessage GetAll()
+        public HttpResponseMessage GetTimKiem(string batDau, string ketThuc)
         {
-            return _client.GetAsync(CurrentLink.ApplicationUser).Result;
+            return _client.GetAsync(CurrentLink.GetTimKiem + "?batDau=" + batDau + "&ketThuc=" + ketThuc).Result;
         }
     }
 }

@@ -21,15 +21,8 @@ namespace EPK.Data.Models
 
         public string MayTinhId { get; set; }
 
-        public int? NhanVienId { get; set; }
+        public string NhanVienId { get; set; }
 
-        [ForeignKey("LoaiVeId")]
-        public virtual LoaiVe LoaiVe { set; get; }
-
-        [ForeignKey("MayTinhId")]
-        public virtual MayTinh MayTinh { set; get; }
-
-        [ForeignKey("NhanVienId")]
-        public virtual NhanVien NhanVien { set; get; }
+        public int? BaiXeId { get; set; }
     }
 }

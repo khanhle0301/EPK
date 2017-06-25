@@ -1,11 +1,13 @@
 ﻿(function (app) {
-    app.controller('thongkenhanhtatcaListController', thongkenhanhtatcaListController);
+    app.controller('thongkechitietListController', thongkechitietListController);
 
-    thongkenhanhtatcaListController.$inject = ['$scope', 'apiService', 'notificationService'];
+    thongkechitietListController.$inject = ['$scope', 'apiService', 'notificationService'];
 
-    function thongkenhanhtatcaListController($scope, apiService, notificationService) {
+    function thongkechitietListController($scope, apiService, notificationService) {
         $scope.loading = true;
         $scope.data = [];
+
+        $scope.listXe = [];
 
         $scope.page = 0;
         $scope.pageCount = 0;
@@ -14,10 +16,14 @@
         $scope.batDau = new Date();
         $scope.ketThuc = new Date();
 
-        $scope.sort = 'ngay';
+        $scope.sendmail = true;
+
+        $scope.trongbai = 'trongbai';
 
         $scope.xethang = true;
         $scope.vanglai = true;
+
+        $scope.type = 'chitiet';
 
         $scope.search = search;
         $scope.exportExcel = exportExcel;
@@ -26,11 +32,16 @@
             var config = {
                 params: {
                     batDau: convert($scope.batDau),
-                    ketThuc: convert($scope.ketThuc)
+                    ketThuc: convert($scope.ketThuc),
+                    type: $scope.type,
+                    trongbai: $scope.trongbai
                 }
             }
-            apiService.get('/api/thongkenhanh/ExportXls', config, function (response) {
+            apiService.get('/api/thongkechitiet/ExportXls', config, function (response) {
                 if (response.status = 200) {
+                    $("#myModal").removeClass("in");
+                    $(".modal-backdrop").remove();
+                    $("#myModal").hide();
                     window.location.href = response.data.Message;
                 }
             }, function (error) {
@@ -59,12 +70,11 @@
                     ketThuc: convert($scope.ketThuc),
                     vanglai: $scope.vanglai,
                     thang: $scope.xethang,
-                    sort: $scope.sort,
-                    maytinh: '',
-                    nhanvien: ''
+                    sendmail: $scope.sendmail,
+                    trongbai: $scope.trongbai
                 }
             }
-            apiService.get('api/thongkenhanh/getall', config, dataLoadCompleted, dataLoadFailed);
+            apiService.get('api/thongkechitiet/getall', config, dataLoadCompleted, dataLoadFailed);
         }
 
         function dataLoadCompleted(result) {
@@ -79,6 +89,11 @@
             $scope.page = result.data.Page;
             $scope.pagesCount = result.data.TotalPages;
             $scope.totalCount = result.data.TotalCount;
+            $scope.soLuotXe = result.data.SoLuotXe;
+            $scope.xeVangLai = result.data.XeVangLai;
+            $scope.xeThang = result.data.XeThang;
+            $scope.listXeVangLai = result.data.ListXeVangLai;
+
             $scope.loading = false;
         }
         function dataLoadFailed(response) {
@@ -89,4 +104,4 @@
             getThongKes();
         }
     }
-})(angular.module('epk.thongkenhanhs'));
+})(angular.module('epk.thongkechitiets'));
