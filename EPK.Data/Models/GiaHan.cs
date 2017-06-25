@@ -24,7 +24,9 @@ namespace EPK.Data.Models
 
         public long? GiaVe { get; set; }
 
-        public int? MayTinhId { get; set; }
+        public string MayTinhId { get; set; }
+
+        public string NhanVienId { get; set; }
 
         public int? BaiXeId { get; set; }
 

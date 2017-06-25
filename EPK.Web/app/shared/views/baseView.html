@@ -163,7 +163,7 @@
                                 <li><a ui-sref="dmvethangs"><i class="fa fa-circle-o"></i> Danh mục</a></li>
                                 <li><a ui-sref="vethangs"><i class="fa fa-circle-o"></i> Vé Tháng</a></li>
                             </ul>
-                        </li>                     
+                        </li>
                         <li><a ui-sref="application_users"><i class="fa fa-circle-o"></i> Tài khoản</a></li>
                         <li class="treeview">
                             <a href="javascript:void(0);">
@@ -186,7 +186,20 @@
                         <span class="label label-primary pull-right">4</span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a ui-sref="#"><i class="fa fa-circle-o"></i> Thống kê nhanh</a></li>
+                        <li class="treeview">
+                            <a href="javascript:void(0);">
+                                <i class="fa fa-circle-o"></i> Thống kê nhanh
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu" style="display: none;">
+                                <li><a ui-sref="thongkenhanh_tatcas"><i class="fa fa-circle-o"></i> Tất cả</a></li>
+                                <li><a ui-sref="thongkenhanh_maytinhs"><i class="fa fa-circle-o"></i> Theo máy tính</a></li>
+                                <li><a ui-sref="thongkenhanh_nhanviens"><i class="fa fa-circle-o"></i> Theo nhân viên</a></li>
+                            </ul>
+                        </li>
+
                         <li><a ui-sref="thongkechitiets"><i class="fa fa-circle-o"></i> Thống kê chi tiết</a></li>
                         <li><a ui-sref="thongkegiahans"><i class="fa fa-circle-o"></i> Thống kê gia hạn</a></li>
                         <li><a ui-sref="#"><i class="fa fa-circle-o"></i> Lịch sử hoạt động</a></li>

@@ -144,7 +144,12 @@
         </member>
         <member name="P:EPK.Data.Resources.CurrentLink.ThongKeGiaHan">
             <summary>
-              Looks up a localized string similar to /api/thongke/thongkegiahan.
+              Looks up a localized string similar to /api/giahan/thongkengay.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.ThongKeNhanh">
+            <summary>
+              Looks up a localized string similar to api/ra/thongkengay.
             </summary>
         </member>
         <member name="P:EPK.Data.Resources.CurrentLink.UpdateDmNhanVien">

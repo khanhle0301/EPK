@@ -11,6 +11,9 @@
          'epk.nhanviens',
          'epk.vethangs',
          'epk.danhmucs',
+
+          'epk.thongkenhanhs',
+
          'epk.common'])
         .config(config)
         .config(configAuthentication);

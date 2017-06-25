@@ -219,6 +219,7 @@
     <Compile Include="Controllers\NhanVienController.cs" />
     <Compile Include="Controllers\TheController.cs" />
     <Compile Include="Controllers\ThongKeController.cs" />
+    <Compile Include="Controllers\ThongKeNhanhController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -233,7 +234,9 @@
     <Compile Include="Models\DmVeThangViewModel.cs" />
     <Compile Include="Models\GiaHanViewModel.cs" />
     <Compile Include="Models\NhanVienViewModel.cs" />
+    <Compile Include="Models\RaViewModel.cs" />
     <Compile Include="Models\TheViewModel.cs" />
+    <Compile Include="Models\ThongKeNhanViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -284,6 +287,13 @@
     <Content Include="app\components\thes\theListView.html" />
     <Content Include="app\components\thes\theListController.js" />
     <Content Include="app\components\thes\thes.module.js" />
+    <Content Include="app\components\thongkenhanhs\thongkenhanhmaytinhListController.js" />
+    <Content Include="app\components\thongkenhanhs\thongkenhanhmaytinhListView.html" />
+    <Content Include="app\components\thongkenhanhs\thongkenhanhnhanvienListController.js" />
+    <Content Include="app\components\thongkenhanhs\thongkenhanhnhanvienListView.html" />
+    <Content Include="app\components\thongkenhanhs\thongkenhanhtatcaListController.js" />
+    <Content Include="app\components\thongkenhanhs\thongkenhanhtatcaListView.html" />
+    <Content Include="app\components\thongkenhanhs\thongkenhanhs.module.js" />
     <Content Include="app\components\thongkes\thongkechitietListController.js" />
     <Content Include="app\components\thongkes\thongkegianhanListController.js" />
     <Content Include="app\components\thongkes\thongkegiahanListView.html" />

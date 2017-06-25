@@ -175,7 +175,10 @@
     <value>/api/nhanvien/getbyid</value>
   </data>
   <data name="ThongKeGiaHan" xml:space="preserve">
-    <value>/api/thongke/thongkegiahan</value>
+    <value>/api/giahan/thongkengay</value>
+  </data>
+  <data name="ThongKeNhanh" xml:space="preserve">
+    <value>api/ra/thongkengay</value>
   </data>
   <data name="UpdateDmNhanVien" xml:space="preserve">
     <value>/api/dmnhanvien/update</value>

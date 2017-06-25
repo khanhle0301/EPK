@@ -232,11 +232,20 @@ namespace EPK.Data.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /api/thongke/thongkegiahan.
+        ///   Looks up a localized string similar to /api/giahan/thongkengay.
         /// </summary>
         public static string ThongKeGiaHan {
             get {
                 return ResourceManager.GetString("ThongKeGiaHan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to api/ra/thongkengay.
+        /// </summary>
+        public static string ThongKeNhanh {
+            get {
+                return ResourceManager.GetString("ThongKeNhanh", resourceCulture);
             }
         }
         

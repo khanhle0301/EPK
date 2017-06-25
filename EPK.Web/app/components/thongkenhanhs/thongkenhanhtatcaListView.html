@@ -1,0 +1,79 @@
+﻿<section class="content-header">
+    <h1>
+        Thống kê chi tiết
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+        <li><a href="#">Thống kê</a></li>
+        <li class="active">Thống kê chi tiết</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="box">
+        <div class="box-body">
+            <di class="row">
+                <form class="form-inline">
+                    <div class="input-group">
+                        <select class="form-control" ng-model="sort">
+                            <option value="ngay" selected>Theo ngày</option>
+                            <option value="thang">Theo tháng</option>
+                            <option value="nam">Theo năm</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon">Từ</div>
+                        <input type="date" name="batDau" class="form-control" required ng-model="batDau">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon">Đến</div>
+                        <input type="date" name="ketThuc" class="form-control" required ng-model="ketThuc">
+                    </div>
+
+                    <button class="btn btn-default" ng-click="search()">Thống kê</button>
+                    <button class="btn btn-default" ng-click="search2()">Xuất Excel</button>
+
+                    <div class="input-group pull-right">
+                        <input type="checkbox" name="vehicle" checked ng-model="xethang"> Xe tháng
+                        <input type="checkbox" name="vehicle" checked ng-model="vanglai"> Xe vãng lai
+                    </div>
+                </form>
+            </di>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>STT</th>
+                            <th>Mô tả</th>
+                            <th>Số lượt vào</th>
+                            <th>Tổng tiền</th>
+                            <th>Trung bình</th>
+                        </tr>
+                        <tr ng-repeat="item in data">
+                            <td>{{item.STT}}</td>
+                            <td>{{item.MoTa}}</td>
+                            <td>{{item.SoLuotVao}}</td>
+                            <td>{{item.TongTien}}</td>
+                            <td>{{item.TrungBinh}}</td>
+                        </tr>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5"><span class="pull-right">Trang: {{page+1}} - Tổng số bản ghi: {{totalCount}}</span></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <div ng-if="loading">
+                        <div class="col-xs-4"></div>
+                        <div class="col-xs-4">
+                            <i class="fa fa-refresh fa-4x fa-spin"></i> <label class="label label-primary">Đang tải...</label>
+                        </div>
+                        <div class="col-xs-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.box-body -->
+        <div class="box-footer clearfix">
+            <pager-directive page="{{page}}" custom-path="{{customPath}}" pages-count="{{pagesCount}}" total-count="{{totalCount}}" search-func="getThongKes(page)"></pager-directive>
+        </div>
+    </div>
+</section><!-- /.content -->

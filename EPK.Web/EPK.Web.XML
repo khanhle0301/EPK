@@ -253,6 +253,12 @@
              <param name="toDate"></param>
              <returns></returns>
         </member>
+        <member name="M:EPK.Web.Controllers.ThongKeNhanhController.#ctor(EPK.Service.IThongKeNhanhService,EPK.Service.IGiaHanService)">
+             <summary>
+            
+             </summary>
+             <param name="giaHanService"></param>
+        </member>
         <member name="T:EPK.Web.WebApiApplication">
              <summary>
             

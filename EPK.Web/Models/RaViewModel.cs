@@ -1,16 +1,11 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
 
-namespace EPK.Data.Models
+namespace EPK.Web.Models
 {
-    [Table("Ras")]
-    public class Ra
+    public class RaViewModel
     {
-        [StringLength(50)]
         public string MaThe { get; set; }
 
-        [StringLength(50)]
         public string BienSo { get; set; }
 
         public DateTime? GioVao { get; set; }

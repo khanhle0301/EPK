@@ -51,9 +51,11 @@
     <Compile Include="ApplicationUserService.cs" />
     <Compile Include="DmNhanVienService.cs" />
     <Compile Include="DmVeThangService.cs" />
+    <Compile Include="GiaHanService.cs" />
     <Compile Include="NhanVienService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheService.cs" />
+    <Compile Include="ThongKeNhanhService.cs" />
     <Compile Include="ThongKeService.cs" />
   </ItemGroup>
   <ItemGroup>

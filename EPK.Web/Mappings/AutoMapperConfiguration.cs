@@ -20,6 +20,8 @@ namespace EPK.Web.Mappings
             Mapper.CreateMap<DmVeThang, DmVeThangViewModel>();
             Mapper.CreateMap<NhanVien, NhanVienViewModel>();
             Mapper.CreateMap<The, TheViewModel>();
+
+            Mapper.CreateMap<Ra, RaViewModel>();
         }
     }
 }
