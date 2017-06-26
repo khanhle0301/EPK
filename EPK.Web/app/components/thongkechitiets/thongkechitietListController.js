@@ -89,10 +89,10 @@
             $scope.page = result.data.Page;
             $scope.pagesCount = result.data.TotalPages;
             $scope.totalCount = result.data.TotalCount;
-            $scope.soLuotXe = result.data.SoLuotXe;
-            $scope.xeVangLai = result.data.XeVangLai;
-            $scope.xeThang = result.data.XeThang;
-            $scope.listXeVangLai = result.data.ListXeVangLai;
+            $scope.soLuotXe = result.data.SumThongKeChiTiet.SoLuotXe;
+            $scope.xeVangLai = result.data.SumThongKeChiTiet.XeVangLai;
+            $scope.xeThang = result.data.SumThongKeChiTiet.XeThang;
+            $scope.listXeVangLai = result.data.SumThongKeChiTiet.ListXeVangLai;
 
             $scope.loading = false;
         }

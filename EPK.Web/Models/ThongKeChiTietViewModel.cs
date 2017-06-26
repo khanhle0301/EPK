@@ -2,7 +2,7 @@
 {
     public class ThongKeChiTietViewModel
     {
-        public int STT { get; set; }
+        public int? STT { get; set; }
 
         public string MaThe { get; set; }
 

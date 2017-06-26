@@ -7,6 +7,12 @@
 
     function config($stateProvider, $urlRouterProvider) {
         $stateProvider
+            .state('thongkenhanhs', {
+                url: "/thongkenhanhs",
+                parent: 'base',
+                templateUrl: "/app/components/thongkenhanhs/thongkenhanhListView.html",
+                controller: "thongkenhanhListController"
+            })
             .state('thongkenhanh_tatcas', {
                 url: "/thongkenhanh_tatcas",
                 parent: 'base',

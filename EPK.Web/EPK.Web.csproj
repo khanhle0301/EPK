@@ -244,9 +244,11 @@
     <Compile Include="Models\DmNhanVienViewModel.cs" />
     <Compile Include="Models\DmVeThangViewModel.cs" />
     <Compile Include="Models\GiaHanViewModel.cs" />
+    <Compile Include="Models\ListXe.cs" />
     <Compile Include="Models\MayTinhViewModel.cs" />
     <Compile Include="Models\NhanVienViewModel.cs" />
     <Compile Include="Models\RaViewModel.cs" />
+    <Compile Include="Models\SumThongKeChiTiet.cs" />
     <Compile Include="Models\TheViewModel.cs" />
     <Compile Include="Models\ThongKeChiTietViewModel.cs" />
     <Compile Include="Models\ThongKeNhanViewModel.cs" />
@@ -306,6 +308,8 @@
     <Content Include="app\components\thes\theListController.js" />
     <Content Include="app\components\thes\thes.module.js" />
     <Content Include="app\components\thongkechitiets\thongkechitiets.module.js" />
+    <Content Include="app\components\thongkenhanhs\thongkenhanhListController.js" />
+    <Content Include="app\components\thongkenhanhs\thongkenhanhListView.html" />
     <Content Include="app\components\thongkenhanhs\thongkenhanhmaytinhListController.js" />
     <Content Include="app\components\thongkenhanhs\thongkenhanhmaytinhListView.html" />
     <Content Include="app\components\thongkenhanhs\thongkenhanhnhanvienListController.js" />
@@ -395,11 +399,6 @@
     <Content Include="Assets\js\demo.js" />
     <Content Include="Assets\js\pages\dashboard.js" />
     <Content Include="Assets\js\pages\dashboard2.js" />
-    <Content Include="Assets\libs\angular-chart.js\angular-chart.js" />
-    <Content Include="Assets\libs\angular-chart.js\dist\angular-chart.css" />
-    <Content Include="Assets\libs\angular-chart.js\dist\angular-chart.js" />
-    <Content Include="Assets\libs\angular-chart.js\dist\angular-chart.min.js" />
-    <Content Include="Assets\libs\angular-chart.js\gulpfile.js" />
     <Content Include="Assets\libs\angular-loading-bar\build\loading-bar.css" />
     <Content Include="Assets\libs\angular-loading-bar\build\loading-bar.js" />
     <Content Include="Assets\libs\angular-loading-bar\build\loading-bar.min.css" />
@@ -459,111 +458,6 @@
     <Content Include="Assets\libs\bootstrap\js\tooltip.js" />
     <Content Include="Assets\libs\bootstrap\js\transition.js" />
     <Content Include="Assets\libs\bootstrap\package.js" />
-    <Content Include="Assets\libs\chart.js\dist\Chart.bundle.js" />
-    <Content Include="Assets\libs\chart.js\dist\Chart.bundle.min.js" />
-    <Content Include="Assets\libs\chart.js\dist\Chart.js" />
-    <Content Include="Assets\libs\chart.js\dist\Chart.min.js" />
-    <Content Include="Assets\libs\chart.js\gulpfile.js" />
-    <Content Include="Assets\libs\chart.js\karma.conf.ci.js" />
-    <Content Include="Assets\libs\chart.js\karma.conf.js" />
-    <Content Include="Assets\libs\chart.js\karma.coverage.conf.js" />
-    <Content Include="Assets\libs\chart.js\samples\AnimationCallbacks\progress-bar.html" />
-    <Content Include="Assets\libs\chart.js\samples\bar-horizontal.html" />
-    <Content Include="Assets\libs\chart.js\samples\bar-multi-axis.html" />
-    <Content Include="Assets\libs\chart.js\samples\bar-stacked.html" />
-    <Content Include="Assets\libs\chart.js\samples\bar.html" />
-    <Content Include="Assets\libs\chart.js\samples\bubble.html" />
-    <Content Include="Assets\libs\chart.js\samples\combo-bar-line.html" />
-    <Content Include="Assets\libs\chart.js\samples\data_label_combo-bar-line.html" />
-    <Content Include="Assets\libs\chart.js\samples\different-point-sizes.html" />
-    <Content Include="Assets\libs\chart.js\samples\doughnut.html" />
-    <Content Include="Assets\libs\chart.js\samples\line-cubicInterpolationMode.html" />
-    <Content Include="Assets\libs\chart.js\samples\line-customTooltips.html" />
-    <Content Include="Assets\libs\chart.js\samples\line-legend.html" />
-    <Content Include="Assets\libs\chart.js\samples\line-logarithmic.html" />
-    <Content Include="Assets\libs\chart.js\samples\line-multi-axis.html" />
-    <Content Include="Assets\libs\chart.js\samples\line-multiline-labels.html" />
-    <Content Include="Assets\libs\chart.js\samples\line-non-numeric-y.html" />
-    <Content Include="Assets\libs\chart.js\samples\line-skip-points.html" />
-    <Content Include="Assets\libs\chart.js\samples\line-stacked-area.html" />
-    <Content Include="Assets\libs\chart.js\samples\line-stepped.html" />
-    <Content Include="Assets\libs\chart.js\samples\line-x-axis-filter.html" />
-    <Content Include="Assets\libs\chart.js\samples\line.html" />
-    <Content Include="Assets\libs\chart.js\samples\pie-customTooltips.html" />
-    <Content Include="Assets\libs\chart.js\samples\pie.html" />
-    <Content Include="Assets\libs\chart.js\samples\polar-area.html" />
-    <Content Include="Assets\libs\chart.js\samples\radar-skip-points.html" />
-    <Content Include="Assets\libs\chart.js\samples\radar.html" />
-    <Content Include="Assets\libs\chart.js\samples\scatter-logX.html" />
-    <Content Include="Assets\libs\chart.js\samples\scatter-multi-axis.html" />
-    <Content Include="Assets\libs\chart.js\samples\scatter.html" />
-    <Content Include="Assets\libs\chart.js\samples\timeScale\combo-time-scale.html" />
-    <Content Include="Assets\libs\chart.js\samples\timeScale\line-time-point-data.html" />
-    <Content Include="Assets\libs\chart.js\samples\timeScale\line-time-scale.html" />
-    <Content Include="Assets\libs\chart.js\samples\tooltip-hooks.html" />
-    <Content Include="Assets\libs\chart.js\src\chart.js" />
-    <Content Include="Assets\libs\chart.js\src\charts\Chart.Bar.js" />
-    <Content Include="Assets\libs\chart.js\src\charts\Chart.Bubble.js" />
-    <Content Include="Assets\libs\chart.js\src\charts\Chart.Doughnut.js" />
-    <Content Include="Assets\libs\chart.js\src\charts\Chart.Line.js" />
-    <Content Include="Assets\libs\chart.js\src\charts\Chart.PolarArea.js" />
-    <Content Include="Assets\libs\chart.js\src\charts\Chart.Radar.js" />
-    <Content Include="Assets\libs\chart.js\src\charts\Chart.Scatter.js" />
-    <Content Include="Assets\libs\chart.js\src\controllers\controller.bar.js" />
-    <Content Include="Assets\libs\chart.js\src\controllers\controller.bubble.js" />
-    <Content Include="Assets\libs\chart.js\src\controllers\controller.doughnut.js" />
-    <Content Include="Assets\libs\chart.js\src\controllers\controller.line.js" />
-    <Content Include="Assets\libs\chart.js\src\controllers\controller.polarArea.js" />
-    <Content Include="Assets\libs\chart.js\src\controllers\controller.radar.js" />
-    <Content Include="Assets\libs\chart.js\src\core\core.animation.js" />
-    <Content Include="Assets\libs\chart.js\src\core\core.canvasHelpers.js" />
-    <Content Include="Assets\libs\chart.js\src\core\core.controller.js" />
-    <Content Include="Assets\libs\chart.js\src\core\core.datasetController.js" />
-    <Content Include="Assets\libs\chart.js\src\core\core.element.js" />
-    <Content Include="Assets\libs\chart.js\src\core\core.helpers.js" />
-    <Content Include="Assets\libs\chart.js\src\core\core.js" />
-    <Content Include="Assets\libs\chart.js\src\core\core.layoutService.js" />
-    <Content Include="Assets\libs\chart.js\src\core\core.legend.js" />
-    <Content Include="Assets\libs\chart.js\src\core\core.plugin.js" />
-    <Content Include="Assets\libs\chart.js\src\core\core.scale.js" />
-    <Content Include="Assets\libs\chart.js\src\core\core.scaleService.js" />
-    <Content Include="Assets\libs\chart.js\src\core\core.title.js" />
-    <Content Include="Assets\libs\chart.js\src\core\core.tooltip.js" />
-    <Content Include="Assets\libs\chart.js\src\elements\element.arc.js" />
-    <Content Include="Assets\libs\chart.js\src\elements\element.line.js" />
-    <Content Include="Assets\libs\chart.js\src\elements\element.point.js" />
-    <Content Include="Assets\libs\chart.js\src\elements\element.rectangle.js" />
-    <Content Include="Assets\libs\chart.js\src\scales\scale.category.js" />
-    <Content Include="Assets\libs\chart.js\src\scales\scale.linear.js" />
-    <Content Include="Assets\libs\chart.js\src\scales\scale.linearbase.js" />
-    <Content Include="Assets\libs\chart.js\src\scales\scale.logarithmic.js" />
-    <Content Include="Assets\libs\chart.js\src\scales\scale.radialLinear.js" />
-    <Content Include="Assets\libs\chart.js\src\scales\scale.time.js" />
-    <Content Include="Assets\libs\chart.js\test\controller.bar.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\controller.bubble.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\controller.doughnut.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\controller.line.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\controller.polarArea.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\controller.radar.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\core.element.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\core.helpers.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\core.layoutService.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\core.legend.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\core.plugin.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\core.scaleService.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\core.title.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\core.tooltip.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\defaultConfig.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\element.arc.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\element.line.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\element.point.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\element.rectangle.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\mockContext.js" />
-    <Content Include="Assets\libs\chart.js\test\scale.category.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\scale.linear.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\scale.logarithmic.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\scale.radialLinear.tests.js" />
-    <Content Include="Assets\libs\chart.js\test\scale.time.tests.js" />
     <Content Include="Assets\libs\checklist-model\checklist-model.js" />
     <Content Include="Assets\libs\checklist-model\LICENSE.txt" />
     <Content Include="Assets\libs\fastclick\lib\fastclick.js" />
@@ -1169,11 +1063,6 @@
     <Content Include="Assets\libs\ng-ckeditor\src\styles\ng-ckeditor.less" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Assets\libs\ngBootbox\typings\angularjs\angular.d.ts" />
-    <TypeScriptCompile Include="Assets\libs\ngBootbox\typings\jquery\jquery.d.ts" />
-    <TypeScriptCompile Include="Assets\libs\ngBootbox\typings\tsd.d.ts" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Assets\libs\ngBootbox\.bower.json" />
     <Content Include="Assets\libs\ngBootbox\bower.json" />
     <Content Include="Assets\libs\ngBootbox\package.json" />
@@ -1207,55 +1096,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\libs\chart.js\.bower.json" />
-    <Content Include="Assets\libs\chart.js\.codeclimate.yml" />
-    <Content Include="Assets\libs\chart.js\.editorconfig" />
-    <Content Include="Assets\libs\chart.js\.eslintignore" />
-    <Content Include="Assets\libs\chart.js\.eslintrc" />
-    <Content Include="Assets\libs\chart.js\.github\ISSUE_TEMPLATE.md" />
-    <Content Include="Assets\libs\chart.js\.github\PULL_REQUEST_TEMPLATE.md" />
-    <Content Include="Assets\libs\chart.js\.gitignore" />
-    <Content Include="Assets\libs\chart.js\.npmignore" />
-    <Content Include="Assets\libs\chart.js\.travis.yml" />
-    <Content Include="Assets\libs\chart.js\bower.json" />
-    <Content Include="Assets\libs\chart.js\composer.json" />
-    <Content Include="Assets\libs\chart.js\config.jshintrc" />
-    <Content Include="Assets\libs\chart.js\CONTRIBUTING.md" />
-    <Content Include="Assets\libs\chart.js\docs\00-Getting-Started.md" />
-    <Content Include="Assets\libs\chart.js\docs\01-Chart-Configuration.md" />
-    <Content Include="Assets\libs\chart.js\docs\02-Scales.md" />
-    <Content Include="Assets\libs\chart.js\docs\03-Line-Chart.md" />
-    <Content Include="Assets\libs\chart.js\docs\04-Bar-Chart.md" />
-    <Content Include="Assets\libs\chart.js\docs\05-Radar-Chart.md" />
-    <Content Include="Assets\libs\chart.js\docs\06-Polar-Area-Chart.md" />
-    <Content Include="Assets\libs\chart.js\docs\07-Pie-Doughnut-Chart.md" />
-    <Content Include="Assets\libs\chart.js\docs\08-Bubble-Chart.md" />
-    <Content Include="Assets\libs\chart.js\docs\09-Advanced.md" />
-    <Content Include="Assets\libs\chart.js\docs\10-Notes.md" />
-    <Content Include="Assets\libs\chart.js\LICENSE.md" />
-    <Content Include="Assets\libs\chart.js\MAINTAINING.md" />
-    <Content Include="Assets\libs\chart.js\package.json" />
-    <Content Include="Assets\libs\chart.js\README.md" />
-    <Content Include="Assets\libs\chart.js\scripts\release.sh" />
-    <Content Include="Assets\libs\chart.js\thankyou.md" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Assets\libs\checklist-model\.bower.json" />
     <Content Include="Assets\libs\checklist-model\bower.json" />
     <Content Include="Assets\libs\checklist-model\readme.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Assets\libs\angular-chart.js\.bower.json" />
-    <Content Include="Assets\libs\angular-chart.js\bower.json" />
-    <Content Include="Assets\libs\angular-chart.js\CONTRIBUTING.md" />
-    <Content Include="Assets\libs\angular-chart.js\dist\angular-chart.js.tar.gz" />
-    <Content Include="Assets\libs\angular-chart.js\dist\angular-chart.min.js.map" />
-    <Content Include="Assets\libs\angular-chart.js\Dockerfile" />
-    <Content Include="Assets\libs\angular-chart.js\ISSUE_TEMPLATE.md" />
-    <Content Include="Assets\libs\angular-chart.js\LICENSE" />
-    <Content Include="Assets\libs\angular-chart.js\package.json" />
-    <Content Include="Assets\libs\angular-chart.js\PULL_REQUEST_TEMPLATE.md" />
-    <Content Include="Assets\libs\angular-chart.js\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppSettings.config" />
@@ -1279,6 +1122,11 @@
     <Content Include="Resources\ThongKe.xlsx" />
     <Content Include="Resources\ThongKe_TongQuat.xlsx" />
     <Content Include="Resources\VeThang.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Assets\libs\ngBootbox\typings\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="Assets\libs\ngBootbox\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Assets\libs\ngBootbox\typings\tsd.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

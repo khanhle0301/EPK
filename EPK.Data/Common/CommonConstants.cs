@@ -14,6 +14,8 @@
 
         public const string SessionThongKeChiTiet = "SessionThongKeChiTiet";
 
+        public const string SessionSumThongKeChiTiet = "SessionSumThongKeChiTiet";
+
         public const string SessionListRa = "SessionListRa";
     }
 }

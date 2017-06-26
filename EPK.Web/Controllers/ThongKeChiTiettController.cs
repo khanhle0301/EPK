@@ -50,6 +50,8 @@ namespace EPK.Web.Controllers
         {
             return CreateHttpResponse(request, () =>
             {
+                HttpContext.Current.Session[CommonConstants.SessionSumThongKeChiTiet] = new SumThongKeChiTiet();
+
                 HttpContext.Current.Session[CommonConstants.SessionThongKeChiTiet] = new List<ThongKeChiTietViewModel>();
 
                 HttpContext.Current.Session[CommonConstants.SessionListRa] = new List<Ra>();
@@ -293,18 +295,25 @@ namespace EPK.Web.Controllers
 
                     var query = listData.OrderBy(x => x.STT).Skip(page * pageSize).Take(pageSize);
 
-                    PaginationSet<ThongKeChiTietViewModel> pagedSet = new PaginationSet<ThongKeChiTietViewModel>()
+                    var sumTk = new SumThongKeChiTiet
                     {
-                        Page = page,
-                        TotalCount = totalRow,
-                        TotalPages = (int)Math.Ceiling((decimal)totalRow / pageSize),
-                        Items = query,
                         SoLuotXe = soLuotXe,
                         XeVangLai = xeVangLai,
                         ListXeVangLai = listXe,
                         XeThang = xeThang
                     };
 
+                    PaginationSet<ThongKeChiTietViewModel> pagedSet = new PaginationSet<ThongKeChiTietViewModel>()
+                    {
+                        Page = page,
+                        TotalCount = totalRow,
+                        TotalPages = (int)Math.Ceiling((decimal)totalRow / pageSize),
+                        Items = query,
+                        SumThongKeChiTiet = sumTk
+                    };
+
+
+                    HttpContext.Current.Session[CommonConstants.SessionSumThongKeChiTiet] = sumTk;
                     HttpContext.Current.Session[CommonConstants.SessionThongKeChiTiet] = listData;
 
                     HttpContext.Current.Session[CommonConstants.SessionListRa] = lst_ra.ToList();
@@ -442,6 +451,32 @@ namespace EPK.Web.Controllers
                 int rowindex = 0;
 
                 var listData = (List<ThongKeChiTietViewModel>)HttpContext.Current.Session[CommonConstants.SessionThongKeChiTiet];
+
+                var sumTk = (SumThongKeChiTiet)HttpContext.Current.Session[CommonConstants.SessionSumThongKeChiTiet];
+
+                listData.Add(new ThongKeChiTietViewModel
+                {
+                    BienSo = "Số lượt xe",
+                    GioRa = sumTk.SoLuotXe.ToString()
+                });
+                listData.Add(new ThongKeChiTietViewModel
+                {
+                    BienSo = "Xe vãng lai",
+                    GioRa = sumTk.XeVangLai.ToString()
+                });
+                foreach (var item in sumTk.ListXeVangLai)
+                {
+                    listData.Add(new ThongKeChiTietViewModel
+                    {
+                        BienSo = " - " + item.Name,
+                        GioRa = item.Count.ToString()
+                    });
+                }
+                listData.Add(new ThongKeChiTietViewModel
+                {
+                    BienSo = "Xe tháng",
+                    GioRa = sumTk.XeThang.ToString()
+                });
 
 
                 var data = new object[listData.Count, 8];

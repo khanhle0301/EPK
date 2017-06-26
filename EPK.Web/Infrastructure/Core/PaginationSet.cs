@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using EPK.Web.Models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace EPK.Web.Infrastructure.Core
@@ -39,21 +40,14 @@ namespace EPK.Web.Infrastructure.Core
         /// </summary>
         public IEnumerable<T> Items { set; get; }
 
-        public int SoLuotXe { set; get; }
+        //public int SoLuotXe { set; get; }
 
-        public int XeVangLai { set; get; }
+        //public int XeVangLai { set; get; }
 
-        public List<ListXe> ListXeVangLai { set; get; }
+        //public List<ListXe> ListXeVangLai { set; get; }
 
-        public int XeThang { set; get; }
-    }
+        //public int XeThang { set; get; }
 
-    public class ListXe
-    {
-        public int Id { set; get; }
-
-        public string Name { set; get; }
-
-        public int Count { set; get; }
+        public SumThongKeChiTiet SumThongKeChiTiet { set; get; }
     }
 }

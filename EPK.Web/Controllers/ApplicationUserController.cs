@@ -63,19 +63,20 @@ namespace EPK.Web.Controllers
 
         [Route("getall")]
         [HttpGet]
-        public HttpResponseMessage GetListPaging(HttpRequestMessage request)
+        public HttpResponseMessage GetAll(HttpRequestMessage request)
         {
-            //return CreateHttpResponse(request, () =>
-            //{
-            //    var model = _appUser.GetAll();
-            //    var modelVm = Mapper.Map<IEnumerable<ApplicationUser>, IEnumerable<ApplicationUserViewModel>>(model);
+            return CreateHttpResponse(request, () =>
+            {
+                var result = _appUser.GetAll();
 
-            //    var response = request.CreateResponse(HttpStatusCode.OK, modelVm);
+                var model = result.Content.ReadAsAsync<IEnumerable<ApplicationUser>>().Result;
 
-            //    return response;
-            //});
+                var modelVm = Mapper.Map<IEnumerable<ApplicationUser>, IEnumerable<ApplicationUserViewModel>>(model);
 
-            return null;
+                var response = request.CreateResponse(HttpStatusCode.OK, modelVm);
+
+                return response;
+            });
         }
     }
 }
