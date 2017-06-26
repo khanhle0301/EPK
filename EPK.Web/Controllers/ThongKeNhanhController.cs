@@ -47,7 +47,7 @@ namespace EPK.Web.Controllers
         {
             return CreateHttpResponse(request, () =>
             {
-                HttpContext.Current.Session[CommonConstants.SessionThongKeNhanh] = new List<ThongKeNhanViewModel>();
+                HttpContext.Current.Session[CommonConstants.SessionThongKeNhanh] = new List<ThongKeNhanhViewModel>();
 
                 DateTime _batdau = Convert.ToDateTime(batDau);
                 DateTime _ketthuc = Convert.ToDateTime(ketThuc);
@@ -97,7 +97,7 @@ namespace EPK.Web.Controllers
                     lst_giahan = lst_giahan.Where(_gh => lst_nhanvien_selected.Contains(_gh.NhanVienId)).ToList();
                 }
 
-                List<ThongKeNhanViewModel> listData = new List<ThongKeNhanViewModel>();
+                List<ThongKeNhanhViewModel> listData = new List<ThongKeNhanhViewModel>();
 
                 int STT = 1;
                 switch (sort)
@@ -105,7 +105,7 @@ namespace EPK.Web.Controllers
                     case "ngay":
                         do
                         {
-                            ThongKeNhanViewModel giaHanVm = new ThongKeNhanViewModel();
+                            ThongKeNhanhViewModel giaHanVm = new ThongKeNhanhViewModel();
                             giaHanVm.STT = STT;
                             STT++;
                             giaHanVm.MoTa = "Ngày " + _batdau.ToString("dd/MM/yyyy");
@@ -150,7 +150,7 @@ namespace EPK.Web.Controllers
                     case "thang":
                         do
                         {
-                            ThongKeNhanViewModel giaHanVm = new ThongKeNhanViewModel();
+                            ThongKeNhanhViewModel giaHanVm = new ThongKeNhanhViewModel();
                             giaHanVm.STT = STT;
                             STT++;
                             giaHanVm.MoTa = "Từ ngày:  " + _batdau.ToString("dd/MM/yyyy") + " đến ngày: " + (new DateTime(_batdau.Year, _batdau.Month, DateTime.DaysInMonth(_batdau.Year, _batdau.Month))).ToString("dd/MM/yyyy");
@@ -196,7 +196,7 @@ namespace EPK.Web.Controllers
                     case "nam":
                         do
                         {
-                            ThongKeNhanViewModel giaHanVm = new ThongKeNhanViewModel();
+                            ThongKeNhanhViewModel giaHanVm = new ThongKeNhanhViewModel();
                             giaHanVm.STT = STT;
                             STT++;
                             giaHanVm.MoTa = "Từ ngày:  " + _batdau.ToString("dd/MM/yyyy") + " đến ngày: " + (new DateTime(_batdau.Year, 12, 31)).ToString("dd/MM/yyyy");
@@ -244,7 +244,7 @@ namespace EPK.Web.Controllers
 
                 var query = listData.OrderBy(x => x.STT).Skip(page * pageSize).Take(pageSize);
 
-                PaginationSet<ThongKeNhanViewModel> pagedSet = new PaginationSet<ThongKeNhanViewModel>()
+                PaginationSet<ThongKeNhanhViewModel> pagedSet = new PaginationSet<ThongKeNhanhViewModel>()
                 {
                     Page = page,
                     TotalCount = totalRow,
@@ -309,7 +309,7 @@ namespace EPK.Web.Controllers
 
                 int rowindex = 0;
 
-                var listData = (List<ThongKeNhanViewModel>)HttpContext.Current.Session[CommonConstants.SessionThongKeNhanh];
+                var listData = (List<ThongKeNhanhViewModel>)HttpContext.Current.Session[CommonConstants.SessionThongKeNhanh];
 
                 var data = new object[listData.Count, 4];
                 foreach (var item in listData)

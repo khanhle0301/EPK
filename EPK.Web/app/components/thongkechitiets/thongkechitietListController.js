@@ -16,7 +16,7 @@
         $scope.batDau = new Date();
         $scope.ketThuc = new Date();
 
-        $scope.sendmail = true;
+        $scope.sendmail = false;
 
         $scope.trongbai = 'trongbai';
 
@@ -34,7 +34,8 @@
                     batDau: convert($scope.batDau),
                     ketThuc: convert($scope.ketThuc),
                     type: $scope.type,
-                    trongbai: $scope.trongbai
+                    trongbai: $scope.trongbai,
+                    sendmail: $scope.sendmail
                 }
             }
             apiService.get('/api/thongkechitiet/ExportXls', config, function (response) {
@@ -89,10 +90,10 @@
             $scope.page = result.data.Page;
             $scope.pagesCount = result.data.TotalPages;
             $scope.totalCount = result.data.TotalCount;
-            $scope.soLuotXe = result.data.SumThongKeChiTiet.SoLuotXe;
-            $scope.xeVangLai = result.data.SumThongKeChiTiet.XeVangLai;
-            $scope.xeThang = result.data.SumThongKeChiTiet.XeThang;
-            $scope.listXeVangLai = result.data.SumThongKeChiTiet.ListXeVangLai;
+            $scope.soLuotXe = result.data.SumThongKeChiTiet != null ? result.data.SumThongKeChiTiet.SoLuotXe : 0;
+            $scope.xeVangLai = result.data.SumThongKeChiTiet != null ? result.data.SumThongKeChiTiet.XeVangLai : 0;
+            $scope.xeThang = result.data.SumThongKeChiTiet != null ? result.data.SumThongKeChiTiet.XeThang : 0;
+            $scope.listXeVangLai = result.data.SumThongKeChiTiet != null ? result.data.SumThongKeChiTiet.ListXeVangLai : [];
 
             $scope.loading = false;
         }

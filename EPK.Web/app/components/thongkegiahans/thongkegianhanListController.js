@@ -71,9 +71,9 @@
             $scope.pagesCount = result.data.TotalPages;
             $scope.totalCount = result.data.TotalCount;
 
-            $scope.soLuotXe = result.data.SumThongKeGiaHan.SoLuotXe;
-            $scope.tongtien = result.data.SumThongKeGiaHan.TongIien;
-            $scope.listLoaiGiaVe = result.data.SumThongKeGiaHan.ListLoaiGiaVe;
+            $scope.soLuotXe = result.data.SumThongKeGiaHan != null ? result.data.SumThongKeGiaHan.SoLuotXe : 0;
+            $scope.tongtien = result.data.SumThongKeGiaHan != null ? result.data.SumThongKeGiaHan.TongIien : 0;
+            $scope.listLoaiGiaVe = result.data.SumThongKeGiaHan != null ? result.data.SumThongKeGiaHan.ListLoaiGiaVe : [];
 
             $scope.loading = false;
         }

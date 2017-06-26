@@ -14,7 +14,6 @@ using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Web;
 using System.Web.Http;
-using System.Web.Script.Serialization;
 
 namespace EPK.Web.Controllers
 {
@@ -272,7 +271,6 @@ namespace EPK.Web.Controllers
                                         tkChiTiet.NhanVienVao = "Đã xóa nv";
                                     }
                                 }
-
                             }
                             tkChiTiet.NhanVienRa = "Xe trong bãi";
                             listData.Add(tkChiTiet);
@@ -312,7 +310,6 @@ namespace EPK.Web.Controllers
                         SumThongKeChiTiet = sumTk
                     };
 
-
                     HttpContext.Current.Session[CommonConstants.SessionSumThongKeChiTiet] = sumTk;
                     HttpContext.Current.Session[CommonConstants.SessionThongKeChiTiet] = listData;
 
@@ -326,14 +323,13 @@ namespace EPK.Web.Controllers
                 {
                     return null;
                 }
-
             });
         }
 
         [Route("ExportXls")]
         [HttpGet]
         public HttpResponseMessage ExportXls(HttpRequestMessage request, string batDau, string ketThuc,
-            string type, string trongbai)
+            string type, string trongbai, bool sendmail)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -366,6 +362,11 @@ namespace EPK.Web.Controllers
                         _f_excel_tongquat(fullPath, batDau, ketThuc);
                     }
 
+                    if (sendmail)
+                    {
+                        MailHelper.SendMail("khanhle0301.it@gmail.com", "Báo cáo chi tiết", "Báo cáo chi tiết ngày_" + DateTime.Now, fullPath);
+                    }
+
                     response = request.CreateErrorResponse(HttpStatusCode.OK, Path.Combine(folderReport, fileName));
                 }
                 catch (Exception ex)
@@ -385,7 +386,6 @@ namespace EPK.Web.Controllers
                 Application xlApp = new Application();
                 Workbook xlWorkbook = xlApp.Workbooks.Open(path);
                 _Worksheet xlWorksheet = xlWorkbook.Sheets[1];
-
 
                 var resultLoaXe = _loaiXeService.GetAll();
 

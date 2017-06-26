@@ -255,7 +255,7 @@
     <Compile Include="Models\TheViewModel.cs" />
     <Compile Include="Models\ThongKeChiTietViewModel.cs" />
     <Compile Include="Models\ThongKeGiaHanViewModel.cs" />
-    <Compile Include="Models\ThongKeNhanViewModel.cs" />
+    <Compile Include="Models\ThongKeNhanhViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -314,12 +314,6 @@
     <Content Include="app\components\thongkechitiets\thongkechitiets.module.js" />
     <Content Include="app\components\thongkenhanhs\thongkenhanhListController.js" />
     <Content Include="app\components\thongkenhanhs\thongkenhanhListView.html" />
-    <Content Include="app\components\thongkenhanhs\thongkenhanhmaytinhListController.js" />
-    <Content Include="app\components\thongkenhanhs\thongkenhanhmaytinhListView.html" />
-    <Content Include="app\components\thongkenhanhs\thongkenhanhnhanvienListController.js" />
-    <Content Include="app\components\thongkenhanhs\thongkenhanhnhanvienListView.html" />
-    <Content Include="app\components\thongkenhanhs\thongkenhanhtatcaListController.js" />
-    <Content Include="app\components\thongkenhanhs\thongkenhanhtatcaListView.html" />
     <Content Include="app\components\thongkenhanhs\thongkenhanhs.module.js" />
     <Content Include="app\components\thongkechitiets\thongkechitietListController.js" />
     <Content Include="app\components\thongkegiahans\thongkegianhanListController.js" />

@@ -57,7 +57,7 @@
         function tatca() {
             $('#tblMayTinh').hide();
             $('#tblNhanVien').hide();
-            $('#btnThongKe').removeAttr('disabled');
+            //$('#btnThongKe').removeAttr('disabled');
             $('#tblData').removeAttr('class');
             $('#tblData').attr('class', 'col-md-12');
         }
@@ -122,9 +122,9 @@
             var checked = $filter("filter")(n, { checked: true });
             if (checked.length) {
                 $scope.selectednv = checked;
-                $('#btnThongKe').removeAttr('disabled');
+                //$('#btnThongKe').removeAttr('disabled');
             } else {
-                $('#btnThongKe').attr('disabled', 'disabled');
+                //$('#btnThongKe').attr('disabled', 'disabled');
             }
         }, true);
 
@@ -146,9 +146,9 @@
             var checked = $filter("filter")(n, { checked: true });
             if (checked.length) {
                 $scope.selectedmt = checked;
-                $('#btnThongKe').removeAttr('disabled');
+                //$('#btnThongKe').removeAttr('disabled');
             } else {
-                $('#btnThongKe').attr('disabled', 'disabled');
+                //$('#btnThongKe').attr('disabled', 'disabled');
             }
         }, true);
 
