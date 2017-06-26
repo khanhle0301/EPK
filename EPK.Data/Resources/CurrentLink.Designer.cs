@@ -232,6 +232,15 @@ namespace EPK.Data.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /api/vethang/getall.
+        /// </summary>
+        public static string GetAllVeThang {
+            get {
+                return ResourceManager.GetString("GetAllVeThang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /api/dmnhanvien/getbyid.
         /// </summary>
         public static string GetByIdDmNhanVien {

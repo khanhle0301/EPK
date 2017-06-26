@@ -1,7 +1,7 @@
 ﻿/// <reference path="/Assets/libs/angular/angular.js" />
 
 (function () {
-    angular.module('epk.thongkes', ['epk.common']).config(config);
+    angular.module('epk.thongkegiahans', ['epk.common']).config(config);
 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
@@ -10,7 +10,7 @@
             .state('thongkegiahans', {
                 url: "/thongkegiahans",
                 parent: 'base',
-                templateUrl: "/app/components/thongkes/thongkegiahanListView.html",
+                templateUrl: "/app/components/thongkegiahans/thongkegiahanListView.html",
                 controller: "thongkegiahanListController"
             })
     }

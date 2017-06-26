@@ -40,14 +40,8 @@ namespace EPK.Web.Infrastructure.Core
         /// </summary>
         public IEnumerable<T> Items { set; get; }
 
-        //public int SoLuotXe { set; get; }
-
-        //public int XeVangLai { set; get; }
-
-        //public List<ListXe> ListXeVangLai { set; get; }
-
-        //public int XeThang { set; get; }
-
         public SumThongKeChiTiet SumThongKeChiTiet { set; get; }
+
+        public SumThongKeGiaHan SumThongKeGiaHan { set; get; }
     }
 }

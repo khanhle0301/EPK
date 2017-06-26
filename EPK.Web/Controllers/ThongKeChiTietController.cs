@@ -20,7 +20,7 @@ namespace EPK.Web.Controllers
 {
     [Authorize]
     [RoutePrefix("api/thongkechitiet")]
-    public class ThongKeChiTiettController : ApiControllerBase
+    public class ThongKeChiTietController : ApiControllerBase
     {
         private readonly IThongKeNhanhService _thongKeNhanhService;
 
@@ -32,7 +32,7 @@ namespace EPK.Web.Controllers
 
         private readonly ILoaiXeService _loaiXeService;
 
-        public ThongKeChiTiettController(IThongKeNhanhService thongKeNhanhService,
+        public ThongKeChiTietController(IThongKeNhanhService thongKeNhanhService,
             ILoaiVeService loaiVeService, IApplicationUserService appUser,
             IVaoService vaoService, ILoaiXeService loaiXeService)
         {
@@ -76,7 +76,7 @@ namespace EPK.Web.Controllers
 
                     if (!resultNhanVien.IsSuccessStatusCode)
                     {
-                        return request.CreateErrorResponse(resultRa.StatusCode, resultRa.Content.ReadAsStringAsync().Result);
+                        return request.CreateErrorResponse(resultNhanVien.StatusCode, resultNhanVien.Content.ReadAsStringAsync().Result);
                     }
 
                     var resultLoaXe = _loaiXeService.GetAll();
@@ -477,7 +477,6 @@ namespace EPK.Web.Controllers
                     BienSo = "Xe tháng",
                     GioRa = sumTk.XeThang.ToString()
                 });
-
 
                 var data = new object[listData.Count, 8];
                 foreach (var item in listData)

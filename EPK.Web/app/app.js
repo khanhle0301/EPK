@@ -2,7 +2,7 @@
 
 (function () {
     angular.module('epk',
-        ['epk.thongkes',
+        [
          'epk.application_users',
          'epk.application_groups',
          'epk.thes',
@@ -12,6 +12,7 @@
          'epk.vethangs',
          'epk.danhmucs',
 
+         'epk.thongkegiahans',
          'epk.thongkenhanhs',
          'epk.thongkechitiets',
          'epk.common'])

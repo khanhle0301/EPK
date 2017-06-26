@@ -228,8 +228,9 @@
     <Compile Include="Controllers\MayTinhController.cs" />
     <Compile Include="Controllers\NhanVienController.cs" />
     <Compile Include="Controllers\TheController.cs" />
-    <Compile Include="Controllers\ThongKeChiTiettController.cs" />
+    <Compile Include="Controllers\ThongKeChiTietController.cs" />
     <Compile Include="Controllers\ThongKeController.cs" />
+    <Compile Include="Controllers\ThongKeGiaHanController.cs" />
     <Compile Include="Controllers\ThongKeNhanhController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -244,13 +245,16 @@
     <Compile Include="Models\DmNhanVienViewModel.cs" />
     <Compile Include="Models\DmVeThangViewModel.cs" />
     <Compile Include="Models\GiaHanViewModel.cs" />
+    <Compile Include="Models\ListLoaiGiaVe.cs" />
     <Compile Include="Models\ListXe.cs" />
     <Compile Include="Models\MayTinhViewModel.cs" />
     <Compile Include="Models\NhanVienViewModel.cs" />
     <Compile Include="Models\RaViewModel.cs" />
     <Compile Include="Models\SumThongKeChiTiet.cs" />
+    <Compile Include="Models\SumThongKeGiaHan.cs" />
     <Compile Include="Models\TheViewModel.cs" />
     <Compile Include="Models\ThongKeChiTietViewModel.cs" />
+    <Compile Include="Models\ThongKeGiaHanViewModel.cs" />
     <Compile Include="Models\ThongKeNhanViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources1.Designer.cs">
@@ -318,9 +322,9 @@
     <Content Include="app\components\thongkenhanhs\thongkenhanhtatcaListView.html" />
     <Content Include="app\components\thongkenhanhs\thongkenhanhs.module.js" />
     <Content Include="app\components\thongkechitiets\thongkechitietListController.js" />
-    <Content Include="app\components\thongkes\thongkegianhanListController.js" />
-    <Content Include="app\components\thongkes\thongkegiahanListView.html" />
-    <Content Include="app\components\thongkes\thongkes.module.js" />
+    <Content Include="app\components\thongkegiahans\thongkegianhanListController.js" />
+    <Content Include="app\components\thongkegiahans\thongkegiahanListView.html" />
+    <Content Include="app\components\thongkegiahans\thongkegiahans.module.js" />
     <Content Include="app\components\thongkechitiets\thongkechitietListView.html" />
     <Content Include="app\components\vethangs\vethangListController.js" />
     <Content Include="app\components\vethangs\vethangListView.html" />

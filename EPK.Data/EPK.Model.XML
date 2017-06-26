@@ -142,6 +142,11 @@
               Looks up a localized string similar to /api/the/getall.
             </summary>
         </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetAllVeThang">
+            <summary>
+              Looks up a localized string similar to /api/vethang/getall.
+            </summary>
+        </member>
         <member name="P:EPK.Data.Resources.CurrentLink.GetByIdDmNhanVien">
             <summary>
               Looks up a localized string similar to /api/dmnhanvien/getbyid.
