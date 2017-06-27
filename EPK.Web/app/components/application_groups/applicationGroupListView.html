@@ -47,14 +47,14 @@
                         </tr>
                         <tr ng-repeat="item in data | filter:keyword">
                             <td><input type="checkbox" ng-model="item.checked" name="all" /></td>
-                            <td>{{item.ID}}</td>
+                            <td>{{item.Id}}</td>
                             <td><a ui-sref="edit_application_group({id:item.ID})">{{item.Name}}</a></td>
                             <td>
                                 {{item.Description}}
                             </td>
                             <td>
-                                <button class="btn btn-sm btn-primary" title="Sửa" ui-sref="edit_application_group({id:item.ID})"><i class="fa fa-pencil"></i></button>
-                                <button class="btn  btn-sm btn-danger" title="Xóa" ng-click="deleteItem(item.ID)"><i class="fa fa-trash"></i></button>
+                                <button class="btn btn-sm btn-primary" title="Sửa" ui-sref="edit_application_group({id:item.Id})"><i class="fa fa-pencil"></i></button>
+                                <button class="btn  btn-sm btn-danger" title="Xóa" ng-click="deleteItem(item.Id)"><i class="fa fa-trash"></i></button>
                             </td>
                         </tr>
                         <tfoot>

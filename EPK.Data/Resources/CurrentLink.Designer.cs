@@ -61,6 +61,24 @@ namespace EPK.Data.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /api/applicationGroup/create.
+        /// </summary>
+        public static string AddAppGroup {
+            get {
+                return ResourceManager.GetString("AddAppGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/applicationUser/create.
+        /// </summary>
+        public static string AddAppUser {
+            get {
+                return ResourceManager.GetString("AddAppUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /api/dmnhanvien/create.
         /// </summary>
         public static string AddDmNhanVien {
@@ -88,11 +106,47 @@ namespace EPK.Data.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /api/applicationGroup/getall.
+        /// </summary>
+        public static string ApplicationGroup {
+            get {
+                return ResourceManager.GetString("ApplicationGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/applicationRole/getall.
+        /// </summary>
+        public static string ApplicationRole {
+            get {
+                return ResourceManager.GetString("ApplicationRole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /api/applicationUser/getall.
         /// </summary>
         public static string ApplicationUser {
             get {
                 return ResourceManager.GetString("ApplicationUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/applicationGroup/delete.
+        /// </summary>
+        public static string DeleteAppGroup {
+            get {
+                return ResourceManager.GetString("DeleteAppGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/applicationUser/delete.
+        /// </summary>
+        public static string DeleteAppUser {
+            get {
+                return ResourceManager.GetString("DeleteAppUser", resourceCulture);
             }
         }
         
@@ -111,6 +165,24 @@ namespace EPK.Data.Resources {
         public static string DeleteDmVeThang {
             get {
                 return ResourceManager.GetString("DeleteDmVeThang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/applicationGroup/deletemulti.
+        /// </summary>
+        public static string DeleteMultiAppGroup {
+            get {
+                return ResourceManager.GetString("DeleteMultiAppGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/applicationUser/deletemulti.
+        /// </summary>
+        public static string DeleteMultiAppUser {
+            get {
+                return ResourceManager.GetString("DeleteMultiAppUser", resourceCulture);
             }
         }
         
@@ -241,6 +313,24 @@ namespace EPK.Data.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /api/applicationGroup/getbyid.
+        /// </summary>
+        public static string GetByIdAppGroup {
+            get {
+                return ResourceManager.GetString("GetByIdAppGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/applicationUser/getbyid.
+        /// </summary>
+        public static string GetByIdAppUser {
+            get {
+                return ResourceManager.GetString("GetByIdAppUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /api/dmnhanvien/getbyid.
         /// </summary>
         public static string GetByIdDmNhanVien {
@@ -300,6 +390,24 @@ namespace EPK.Data.Resources {
         public static string ThongKeNhanh {
             get {
                 return ResourceManager.GetString("ThongKeNhanh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/applicationGroup/update.
+        /// </summary>
+        public static string UpdateAppGroup {
+            get {
+                return ResourceManager.GetString("UpdateAppGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/applicationUser/update.
+        /// </summary>
+        public static string UpdateAppUser {
+            get {
+                return ResourceManager.GetString("UpdateAppUser", resourceCulture);
             }
         }
         

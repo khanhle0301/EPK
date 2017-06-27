@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddAppGroup" xml:space="preserve">
+    <value>/api/applicationGroup/create</value>
+  </data>
+  <data name="AddAppUser" xml:space="preserve">
+    <value>/api/applicationUser/create</value>
+  </data>
   <data name="AddDmNhanVien" xml:space="preserve">
     <value>/api/dmnhanvien/create</value>
   </data>
@@ -126,14 +132,32 @@
   <data name="AddNhanVien" xml:space="preserve">
     <value>/api/nhanvien/create</value>
   </data>
+  <data name="ApplicationGroup" xml:space="preserve">
+    <value>/api/applicationGroup/getall</value>
+  </data>
+  <data name="ApplicationRole" xml:space="preserve">
+    <value>/api/applicationRole/getall</value>
+  </data>
   <data name="ApplicationUser" xml:space="preserve">
     <value>/api/applicationUser/getall</value>
+  </data>
+  <data name="DeleteAppGroup" xml:space="preserve">
+    <value>/api/applicationGroup/delete</value>
+  </data>
+  <data name="DeleteAppUser" xml:space="preserve">
+    <value>/api/applicationUser/delete</value>
   </data>
   <data name="DeleteDmNhanVien" xml:space="preserve">
     <value>/api/dmnhanvien/delete</value>
   </data>
   <data name="DeleteDmVeThang" xml:space="preserve">
     <value>/api/dmvethang/delete</value>
+  </data>
+  <data name="DeleteMultiAppGroup" xml:space="preserve">
+    <value>/api/applicationGroup/deletemulti</value>
+  </data>
+  <data name="DeleteMultiAppUser" xml:space="preserve">
+    <value>/api/applicationUser/deletemulti</value>
   </data>
   <data name="DeleteMultiDmNhanVien" xml:space="preserve">
     <value>/api/dmnhanvien/deletemulti</value>
@@ -177,6 +201,12 @@
   <data name="GetAllVeThang" xml:space="preserve">
     <value>/api/vethang/getall</value>
   </data>
+  <data name="GetByIdAppGroup" xml:space="preserve">
+    <value>/api/applicationGroup/getbyid</value>
+  </data>
+  <data name="GetByIdAppUser" xml:space="preserve">
+    <value>/api/applicationUser/getbyid</value>
+  </data>
   <data name="GetByIdDmNhanVien" xml:space="preserve">
     <value>/api/dmnhanvien/getbyid</value>
   </data>
@@ -197,6 +227,12 @@
   </data>
   <data name="ThongKeNhanh" xml:space="preserve">
     <value>api/ra/thongkengay</value>
+  </data>
+  <data name="UpdateAppGroup" xml:space="preserve">
+    <value>/api/applicationGroup/update</value>
+  </data>
+  <data name="UpdateAppUser" xml:space="preserve">
+    <value>/api/applicationUser/update</value>
   </data>
   <data name="UpdateDmNhanVien" xml:space="preserve">
     <value>/api/dmnhanvien/update</value>

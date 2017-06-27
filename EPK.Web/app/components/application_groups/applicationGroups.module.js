@@ -1,4 +1,4 @@
-﻿/// <reference path="/Assets/libs/angular/angular.js" />
+﻿/// <reference path="/Assets/admin/libs/angular/angular.js" />
 
 (function () {
     angular.module('epk.application_groups', ['epk.common']).config(config);

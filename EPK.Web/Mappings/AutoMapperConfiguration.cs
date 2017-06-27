@@ -23,6 +23,7 @@ namespace EPK.Web.Mappings
 
             Mapper.CreateMap<Ra, RaViewModel>();
             Mapper.CreateMap<MayTinh, MayTinhViewModel>();
+            Mapper.CreateMap<ApplicationGroup, ApplicationGroupViewModel>();
         }
     }
 }

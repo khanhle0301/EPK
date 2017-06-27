@@ -20,11 +20,11 @@
         function deleteMultiple() {
             var listId = [];
             $.each($scope.selected, function (i, item) {
-                listId.push(item.ID);
+                listId.push(item.Id);
             });
             var config = {
                 params: {
-                    checkedList: JSON.stringify(listId)
+                    listId: JSON.stringify(listId)
                 }
             }
             apiService.del('api/applicationGroup/deletemulti', config, function (result) {
@@ -84,8 +84,7 @@
             var config = {
                 params: {
                     page: page,
-                    pageSize: 10,
-                    keyword: $scope.keyword,
+                    pageSize: 10
                 }
             }
 
@@ -93,9 +92,6 @@
         }
 
         function dataLoadCompleted(result) {
-            if (result.data.TotalCount == 0) {
-                notificationService.displayWarning('Không có bản ghi nào được tìm thấy.');
-            }
             $scope.data = result.data.Items;
             $scope.page = result.data.Page;
             $scope.pagesCount = result.data.TotalPages;

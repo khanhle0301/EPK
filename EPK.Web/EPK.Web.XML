@@ -74,9 +74,8 @@
              <summary>
             
              </summary>
-             [Authorize]
         </member>
-        <member name="M:EPK.Web.Controllers.ApplicationGroupController.GetListPaging(System.Net.Http.HttpRequestMessage,System.Int32,System.Int32,System.String)">
+        <member name="M:EPK.Web.Controllers.ApplicationGroupController.GetListPaging(System.Net.Http.HttpRequestMessage,System.Int32,System.Int32)">
              <summary>
             
              </summary>
@@ -106,66 +105,6 @@
              <param name="pageSize"></param>
              <returns></returns>
         </member>
-        <member name="T:EPK.Web.Controllers.DmNhanVienController">
-             <summary>
-            
-             </summary>
-        </member>
-        <member name="M:EPK.Web.Controllers.DmNhanVienController.#ctor(EPK.Service.IDmNhanVienService)">
-             <summary>
-            
-             </summary>
-             <param name="dmNhanVienService"></param>
-        </member>
-        <member name="M:EPK.Web.Controllers.DmNhanVienController.GetById(System.Net.Http.HttpRequestMessage,System.Int32)">
-             <summary>
-            
-             </summary>
-             <param name="request"></param>
-             <param name="id"></param>
-             <returns></returns>
-        </member>
-        <member name="M:EPK.Web.Controllers.DmNhanVienController.GetAll(System.Net.Http.HttpRequestMessage,System.Int32,System.Int32)">
-             <summary>
-            
-             </summary>
-             <param name="request"></param>
-             <param name="page"></param>
-             <param name="pageSize"></param>
-             <returns></returns>
-        </member>
-        <member name="M:EPK.Web.Controllers.DmNhanVienController.Post(System.Net.Http.HttpRequestMessage,EPK.Data.Models.DmNhanVien)">
-             <summary>
-            
-             </summary>
-             <param name="request"></param>
-             <param name="dmNhanVien"></param>
-             <returns></returns>
-        </member>
-        <member name="M:EPK.Web.Controllers.DmNhanVienController.Put(System.Net.Http.HttpRequestMessage,EPK.Data.Models.DmNhanVien)">
-             <summary>
-            
-             </summary>
-             <param name="request"></param>
-             <param name="dmNhanVien"></param>
-             <returns></returns>
-        </member>
-        <member name="M:EPK.Web.Controllers.DmNhanVienController.Delete(System.Net.Http.HttpRequestMessage,System.Int32)">
-             <summary>
-            
-             </summary>
-             <param name="request"></param>
-             <param name="id"></param>
-             <returns></returns>
-        </member>
-        <member name="M:EPK.Web.Controllers.DmNhanVienController.DeleteMulti(System.Net.Http.HttpRequestMessage,System.String)">
-             <summary>
-            
-             </summary>
-             <param name="request"></param>
-             <param name="listId"></param>
-             <returns></returns>
-        </member>
         <member name="M:EPK.Web.Controllers.DmVeThangController.#ctor(EPK.Service.IDmVeThangService)">
              <summary>
             
@@ -182,26 +121,6 @@
             
             </summary>
             <returns></returns>
-        </member>
-        <member name="T:EPK.Web.Controllers.NhanVienController">
-             <summary>
-            
-             </summary>
-        </member>
-        <member name="M:EPK.Web.Controllers.NhanVienController.#ctor(EPK.Service.INhanVienService)">
-             <summary>
-            
-             </summary>
-             <param name="nhanVienService"></param>
-        </member>
-        <member name="M:EPK.Web.Controllers.NhanVienController.GetAll(System.Net.Http.HttpRequestMessage,System.Int32,System.Int32)">
-             <summary>
-            
-             </summary>
-             <param name="request"></param>
-             <param name="page"></param>
-             <param name="pageSize"></param>
-             <returns></returns>
         </member>
         <member name="T:EPK.Web.Controllers.TheController">
              <summary>

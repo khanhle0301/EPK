@@ -103,6 +103,14 @@
       <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -210,7 +218,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\libs\checklist-model\test\" />
-    <Folder Include="Infrastructure\Extensions\" />
     <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>
@@ -221,12 +228,11 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ApplicationGroupController.cs" />
+    <Compile Include="Controllers\ApplicationRoleController.cs" />
     <Compile Include="Controllers\ApplicationUserController.cs" />
-    <Compile Include="Controllers\DmNhanVienController.cs" />
     <Compile Include="Controllers\DmVeThangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MayTinhController.cs" />
-    <Compile Include="Controllers\NhanVienController.cs" />
     <Compile Include="Controllers\TheController.cs" />
     <Compile Include="Controllers\ThongKeChiTietController.cs" />
     <Compile Include="Controllers\ThongKeController.cs" />
@@ -237,10 +243,13 @@
     </Compile>
     <Compile Include="Infrastructure\Core\ApiControllerBase.cs" />
     <Compile Include="Infrastructure\Core\PaginationSet.cs" />
+    <Compile Include="Infrastructure\Extensions\EntityExtensions.cs" />
     <Compile Include="Infrastructure\Utilities\Logger.cs" />
     <Compile Include="Infrastructure\Utilities\ObjectExtension.cs" />
     <Compile Include="Infrastructure\Utilities\StringExtension.cs" />
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
+    <Compile Include="Models\ApplicationGroupViewModel.cs" />
+    <Compile Include="Models\ApplicationRoleViewModel.cs" />
     <Compile Include="Models\ApplicationUserViewModel.cs" />
     <Compile Include="Models\DmNhanVienViewModel.cs" />
     <Compile Include="Models\DmVeThangViewModel.cs" />
@@ -282,13 +291,6 @@
     <Content Include="app\components\danhmucs\danhmucs.module.js" />
     <Content Include="app\components\danhmucs\loaiveListController.js" />
     <Content Include="app\components\danhmucs\loaiveListView.html" />
-    <Content Include="app\components\dmnhanviens\dmnhanvienListController.js" />
-    <Content Include="app\components\dmnhanviens\dmnhanvienListView.html" />
-    <Content Include="app\components\dmnhanviens\dmnhanviens.module.js" />
-    <Content Include="app\components\dmnhanviens\dmnhanvienAddController.js" />
-    <Content Include="app\components\dmnhanviens\dmnhanvienAddView.html" />
-    <Content Include="app\components\dmnhanviens\dmnhanvienEditController.js" />
-    <Content Include="app\components\dmnhanviens\dmnhanvienEditView.html" />
     <Content Include="app\components\dmvethangs\dmvethangAddController.js" />
     <Content Include="app\components\dmvethangs\dmvethangAddView.html" />
     <Content Include="app\components\dmvethangs\dmvethangEditController.js" />
@@ -301,13 +303,6 @@
     <Content Include="app\components\home\rootController.js" />
     <Content Include="app\components\login\loginController.js" />
     <Content Include="app\components\login\loginView.html" />
-    <Content Include="app\components\nhanviens\nhanvienAddController.js" />
-    <Content Include="app\components\nhanviens\nhanvienAddView.html" />
-    <Content Include="app\components\nhanviens\nhanvienEditController.js" />
-    <Content Include="app\components\nhanviens\nhanvienEditView.html" />
-    <Content Include="app\components\nhanviens\nhanvienListController.js" />
-    <Content Include="app\components\nhanviens\nhanvienListView.html" />
-    <Content Include="app\components\nhanviens\nhanviens.module.js" />
     <Content Include="app\components\thes\theListView.html" />
     <Content Include="app\components\thes\theListController.js" />
     <Content Include="app\components\thes\thes.module.js" />

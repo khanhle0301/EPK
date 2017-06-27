@@ -7,14 +7,15 @@
 
     function applicationGroupAddController($scope, apiService, notificationService, $location, commonService) {
         $scope.group = {
-            ID: 0,
+            Id: 0,
+            DangSuDung: true,
             Roles: []
         }
 
         $scope.addAppGroup = addApplicationGroup;
 
         function addApplicationGroup() {
-            apiService.post('/api/applicationGroup/add', $scope.group, addSuccessed, addFailed);
+            apiService.post('/api/applicationGroup/create', $scope.group, addSuccessed, addFailed);
         }
 
         function addSuccessed() {
@@ -24,10 +25,10 @@
         }
         function addFailed(response) {
             notificationService.displayError(response.data.Message);
-            notificationService.displayErrorValidation(response);
+            notificationService.displayError(response);
         }
         function loadRoles() {
-            apiService.get('/api/applicationRole/getlistall',
+            apiService.get('/api/applicationRole/getall',
                 null,
                 function (response) {
                     $scope.roles = response.data;

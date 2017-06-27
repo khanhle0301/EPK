@@ -47,6 +47,16 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.AddAppGroup">
+            <summary>
+              Looks up a localized string similar to /api/applicationGroup/create.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.AddAppUser">
+            <summary>
+              Looks up a localized string similar to /api/applicationUser/create.
+            </summary>
+        </member>
         <member name="P:EPK.Data.Resources.CurrentLink.AddDmNhanVien">
             <summary>
               Looks up a localized string similar to /api/dmnhanvien/create.
@@ -62,9 +72,29 @@
               Looks up a localized string similar to /api/nhanvien/create.
             </summary>
         </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.ApplicationGroup">
+            <summary>
+              Looks up a localized string similar to /api/applicationGroup/getall.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.ApplicationRole">
+            <summary>
+              Looks up a localized string similar to /api/applicationRole/getall.
+            </summary>
+        </member>
         <member name="P:EPK.Data.Resources.CurrentLink.ApplicationUser">
             <summary>
               Looks up a localized string similar to /api/applicationUser/getall.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.DeleteAppGroup">
+            <summary>
+              Looks up a localized string similar to /api/applicationGroup/delete.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.DeleteAppUser">
+            <summary>
+              Looks up a localized string similar to /api/applicationUser/delete.
             </summary>
         </member>
         <member name="P:EPK.Data.Resources.CurrentLink.DeleteDmNhanVien">
@@ -75,6 +105,16 @@
         <member name="P:EPK.Data.Resources.CurrentLink.DeleteDmVeThang">
             <summary>
               Looks up a localized string similar to /api/dmvethang/delete.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.DeleteMultiAppGroup">
+            <summary>
+              Looks up a localized string similar to /api/applicationGroup/deletemulti.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.DeleteMultiAppUser">
+            <summary>
+              Looks up a localized string similar to /api/applicationUser/deletemulti.
             </summary>
         </member>
         <member name="P:EPK.Data.Resources.CurrentLink.DeleteMultiDmNhanVien">
@@ -147,6 +187,16 @@
               Looks up a localized string similar to /api/vethang/getall.
             </summary>
         </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetByIdAppGroup">
+            <summary>
+              Looks up a localized string similar to /api/applicationGroup/getbyid.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetByIdAppUser">
+            <summary>
+              Looks up a localized string similar to /api/applicationUser/getbyid.
+            </summary>
+        </member>
         <member name="P:EPK.Data.Resources.CurrentLink.GetByIdDmNhanVien">
             <summary>
               Looks up a localized string similar to /api/dmnhanvien/getbyid.
@@ -180,6 +230,16 @@
         <member name="P:EPK.Data.Resources.CurrentLink.ThongKeNhanh">
             <summary>
               Looks up a localized string similar to api/ra/thongkengay.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.UpdateAppGroup">
+            <summary>
+              Looks up a localized string similar to /api/applicationGroup/update.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.UpdateAppUser">
+            <summary>
+              Looks up a localized string similar to /api/applicationUser/update.
             </summary>
         </member>
         <member name="P:EPK.Data.Resources.CurrentLink.UpdateDmNhanVien">

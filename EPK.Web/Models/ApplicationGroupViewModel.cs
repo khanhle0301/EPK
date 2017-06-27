@@ -1,12 +1,11 @@
+﻿using EPK.Data.Models;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using EPK.Data.Models;
-using System.Collections.Generic;
 
-namespace EPK.Data.Models
+namespace EPK.Web.Models
 {
-    [Table("ApplicationGroups")]
-    public class ApplicationGroup
+    public class ApplicationGroupViewModel
     {
         public int Id { get; set; }
 

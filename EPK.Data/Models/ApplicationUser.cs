@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Collections.Generic;
 
 namespace EPK.Data.Models
 {
@@ -16,12 +17,20 @@ namespace EPK.Data.Models
         [MaxLength(256)]
         public string Address { set; get; }
 
+        public string GhiChu { get; set; }
+
+        public decimal Luong { get; set; }
+
         public DateTime? BirthDay { set; get; }
 
         public int? BaiXeId { get; set; }
 
+        public bool DangSuDung { get; set; }
+
         [ForeignKey("BaiXeId")]
         public virtual BaiXe BaiXe { set; get; }
+
+        public IEnumerable<ApplicationGroup> Groups { set; get; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {

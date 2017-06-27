@@ -3,19 +3,19 @@
 
     app.controller('applicationUserEditController', applicationUserEditController);
 
-    applicationUserEditController.$inject = ['$scope', 'ApiService', 'notificationService', '$location', '$stateParams'];
+    applicationUserEditController.$inject = ['$scope', 'apiService', 'notificationService', '$location', '$stateParams'];
 
-    function applicationUserEditController($scope, ApiService, notificationService, $location, $stateParams) {
+    function applicationUserEditController($scope, apiService, notificationService, $location, $stateParams) {
         $scope.account = {}
 
 
         $scope.updateAccount = updateAccount;
 
         function updateAccount() {
-            ApiService.put('/Api/applicationUser/update', $scope.account, addSuccessed, addFailed);
+            apiService.put('/api/applicationUser/update', $scope.account, addSuccessed, addFailed);
         }
         function loadDetail() {
-            ApiService.get('/Api/applicationUser/detail/' + $stateParams.id, null,
+            apiService.get('/api/applicationUser/detail/' + $stateParams.id, null,
             function (result) {
                 $scope.account = result.data;
             },
@@ -34,7 +34,7 @@
             notificationService.displayErrorValidation(response);
         }
         function loadGroups() {
-            ApiService.get('/Api/applicationGroup/getlistall',
+            apiService.get('/api/applicationGroup/getall',
                 null,
                 function (response) {
                     $scope.groups = response.data;

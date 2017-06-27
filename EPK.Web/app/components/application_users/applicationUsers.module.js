@@ -1,4 +1,4 @@
-﻿/// <reference path="/Assets/libs/angular/angular.js" />
+﻿/// <reference path="/Assets/admin/libs/angular/angular.js" />
 
 (function () {
     angular.module('epk.application_users', ['epk.common']).config(config);
@@ -23,7 +23,7 @@
                 url: "/edit_application_user/:id",
                 templateUrl: "/app/components/application_users/applicationUserEditView.html",
                 controller: "applicationUserEditController",
-                parent: 'base'
+                parent: 'base',
             });
     }
 })();

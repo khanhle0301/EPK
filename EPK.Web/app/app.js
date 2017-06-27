@@ -6,9 +6,7 @@
          'epk.application_users',
          'epk.application_groups',
          'epk.thes',
-         'epk.dmnhanviens',
          'epk.dmvethangs',
-         'epk.nhanviens',
          'epk.vethangs',
          'epk.danhmucs',
 

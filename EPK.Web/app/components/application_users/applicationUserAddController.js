@@ -7,13 +7,14 @@
 
     function applicationUserAddController($scope, apiService, notificationService, $location, commonService) {
         $scope.account = {
+            DangSuDung:true,
             Groups: []
         }
 
         $scope.addAccount = addAccount;
 
         function addAccount() {
-            apiService.post('/Api/applicationUser/add', $scope.account, addSuccessed, addFailed);
+            apiService.post('/api/applicationUser/create', $scope.account, addSuccessed, addFailed);
         }
 
         function addSuccessed() {
@@ -27,7 +28,7 @@
         }
 
         function loadGroups() {
-            apiService.get('/Api/applicationGroup/getlistall',
+            apiService.get('/api/applicationGroup/getall',
                 null,
                 function (response) {
                     $scope.groups = response.data;

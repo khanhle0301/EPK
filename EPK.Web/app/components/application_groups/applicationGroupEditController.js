@@ -34,7 +34,7 @@
             notificationService.displayErrorValidation(response);
         }
         function loadRoles() {
-            apiService.get('/api/applicationRole/getlistall',
+            apiService.get('/api/applicationRole/getall',
                 null,
                 function (response) {
                     $scope.roles = response.data;
