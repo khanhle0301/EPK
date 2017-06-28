@@ -399,7 +399,7 @@ namespace EPK.Web.Controllers
                 {
                     data[row_index, 0] = _xe.Ten;
                     data[row_index, 2] = lst_ra.Where(_ra => _ra.LoaiVeId == _xe.LoaiVeId).Count();
-                    data[row_index, 3] = lst_ra.Where(_ra => _ra.LoaiVeId == _xe.LoaiVeId).Sum(_ra => _ra.GiaVe);
+                    data[row_index, 3] = lst_ra.Where(_ra => _ra.LoaiVeId == _xe.LoaiVeId).Sum(_ra => _ra.GiaVe).Value;
                     row_index++;
                 }
 

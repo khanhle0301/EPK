@@ -1,4 +1,5 @@
 ﻿using EPK.Common;
+using EPK.Data.Common;
 using EPK.Web;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
@@ -10,7 +11,6 @@ using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
-using EPK.Data.Common;
 
 [assembly: OwinStartup(typeof(Startup))]
 
@@ -88,9 +88,17 @@ namespace EPK.Web
 
                 JavaScriptSerializer jss = new JavaScriptSerializer();
                 var rfidReader = jss.Deserialize<dynamic>(resultContent);
-                string token = rfidReader["access_token"];
+                string token = string.Empty;
+                try
+                {
+                    token = rfidReader["access_token"];
+                }
+                catch
+                {
+                    token = string.Empty;
+                }
 
-                if (token != null)
+                if (!string.IsNullOrEmpty(token))
                 {
                     CommonConstants.Token = token;
 
