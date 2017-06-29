@@ -7,11 +7,17 @@
 
     function config($stateProvider, $urlRouterProvider) {
         $stateProvider
-            .state('vethangs', {
-                url: "/vethangs",
+            .state('lichsuvethangs', {
+                url: "/lichsuvethangs",
                 parent: 'base',
-                templateUrl: "/app/components/vethangs/vethangListView.html",
-                controller: "vethangListController"
-            });
+                templateUrl: "/app/components/vethangs/lichsuvethangListView.html",
+                controller: "lichsuvethangListController"
+            })
+        .state('vethangs', {
+            url: "/vethangs",
+            parent: 'base',
+            templateUrl: "/app/components/vethangs/vethangListView.html",
+            controller: "vethangListController"
+        });
     }
 })();

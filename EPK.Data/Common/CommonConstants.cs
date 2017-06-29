@@ -21,5 +21,7 @@
         public const string SessionThongKeGiaHan = "SessionThongKeGiaHan";
 
         public const string SessionSumThongKeGiaHan = "SessionSumThongKeGiaHan";
+
+        public const string SessionLichSu = "SessionLichSu";
     }
 }

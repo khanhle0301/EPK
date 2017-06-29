@@ -24,8 +24,6 @@ namespace EPK.Web.Controllers
     {
         private readonly IThongKeNhanhService _thongKeNhanhService;
 
-        private readonly IMayTinhService _nhanVienService;
-
         private readonly IGiaHanService _giaHanService;
 
         /// <summary>
@@ -33,11 +31,10 @@ namespace EPK.Web.Controllers
         /// </summary>
         /// <param name="giaHanService"></param>
         public ThongKeNhanhController(IThongKeNhanhService thongKeNhanhService,
-            IGiaHanService giaHanService, IMayTinhService nhanVienService)
+            IGiaHanService giaHanService)
         {
             _thongKeNhanhService = thongKeNhanhService;
             _giaHanService = giaHanService;
-            _nhanVienService = nhanVienService;
         }
 
         [Route("getall")]

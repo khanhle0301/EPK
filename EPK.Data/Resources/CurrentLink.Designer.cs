@@ -169,6 +169,24 @@ namespace EPK.Data.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /api/lichsu/delete.
+        /// </summary>
+        public static string DeleteLichSu {
+            get {
+                return ResourceManager.GetString("DeleteLichSu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/lichsu/deletemulti.
+        /// </summary>
+        public static string DeleteLichSuMulti {
+            get {
+                return ResourceManager.GetString("DeleteLichSuMulti", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /api/applicationGroup/deletemulti.
         /// </summary>
         public static string DeleteMultiAppGroup {
@@ -255,6 +273,15 @@ namespace EPK.Data.Resources {
         public static string GetAllDmVeThang {
             get {
                 return ResourceManager.GetString("GetAllDmVeThang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/lichsu/thongkengay.
+        /// </summary>
+        public static string GetAllLichSu {
+            get {
+                return ResourceManager.GetString("GetAllLichSu", resourceCulture);
             }
         }
         
@@ -363,6 +390,24 @@ namespace EPK.Data.Resources {
         public static string GetTimKiem {
             get {
                 return ResourceManager.GetString("GetTimKiem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/vethang/xedangky.
+        /// </summary>
+        public static string GetXeDangKy {
+            get {
+                return ResourceManager.GetString("GetXeDangKy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/vethang/xehuy.
+        /// </summary>
+        public static string GetXeHuy {
+            get {
+                return ResourceManager.GetString("GetXeHuy", resourceCulture);
             }
         }
         

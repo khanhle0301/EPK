@@ -10,9 +10,9 @@ namespace EPK.Data.Models
 
         public DateTime? Ngay { get; set; }
 
-        public int? MayTinhId { get; set; }
+        public string MayTinhId { get; set; }
 
-        public int? NhanVienId { get; set; }
+        public string NhanVienId { get; set; }
 
         public string NoiDung { get; set; }
 

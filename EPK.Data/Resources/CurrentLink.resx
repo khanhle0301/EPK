@@ -153,6 +153,12 @@
   <data name="DeleteDmVeThang" xml:space="preserve">
     <value>/api/dmvethang/delete</value>
   </data>
+  <data name="DeleteLichSu" xml:space="preserve">
+    <value>/api/lichsu/delete</value>
+  </data>
+  <data name="DeleteLichSuMulti" xml:space="preserve">
+    <value>/api/lichsu/deletemulti</value>
+  </data>
   <data name="DeleteMultiAppGroup" xml:space="preserve">
     <value>/api/applicationGroup/deletemulti</value>
   </data>
@@ -182,6 +188,9 @@
   </data>
   <data name="GetAllDmVeThang" xml:space="preserve">
     <value>/api/dmvethang/getall</value>
+  </data>
+  <data name="GetAllLichSu" xml:space="preserve">
+    <value>/api/lichsu/thongkengay</value>
   </data>
   <data name="GetAllLoaiVe" xml:space="preserve">
     <value>/api/loaive/getall</value>
@@ -218,6 +227,12 @@
   </data>
   <data name="GetTimKiem" xml:space="preserve">
     <value>/api/vao/timkiem</value>
+  </data>
+  <data name="GetXeDangKy" xml:space="preserve">
+    <value>/api/vethang/xedangky</value>
+  </data>
+  <data name="GetXeHuy" xml:space="preserve">
+    <value>/api/vethang/xehuy</value>
   </data>
   <data name="ThongKeChiTiet" xml:space="preserve">
     <value>api/ra/thongkengay</value>

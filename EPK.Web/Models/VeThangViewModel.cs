@@ -1,11 +1,11 @@
+﻿using EPK.Data.Models;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace EPK.Data.Models
+namespace EPK.Web.Models
 {
-    [Table("VeThangs")]
-    public class VeThang
+    public class VeThangViewModel
     {
         public int Id { get; set; }
 

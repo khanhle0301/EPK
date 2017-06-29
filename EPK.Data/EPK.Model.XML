@@ -107,6 +107,16 @@
               Looks up a localized string similar to /api/dmvethang/delete.
             </summary>
         </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.DeleteLichSu">
+            <summary>
+              Looks up a localized string similar to /api/lichsu/delete.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.DeleteLichSuMulti">
+            <summary>
+              Looks up a localized string similar to /api/lichsu/deletemulti.
+            </summary>
+        </member>
         <member name="P:EPK.Data.Resources.CurrentLink.DeleteMultiAppGroup">
             <summary>
               Looks up a localized string similar to /api/applicationGroup/deletemulti.
@@ -155,6 +165,11 @@
         <member name="P:EPK.Data.Resources.CurrentLink.GetAllDmVeThang">
             <summary>
               Looks up a localized string similar to /api/dmvethang/getall.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetAllLichSu">
+            <summary>
+              Looks up a localized string similar to /api/lichsu/thongkengay.
             </summary>
         </member>
         <member name="P:EPK.Data.Resources.CurrentLink.GetAllLoaiVe">
@@ -215,6 +230,16 @@
         <member name="P:EPK.Data.Resources.CurrentLink.GetTimKiem">
             <summary>
               Looks up a localized string similar to /api/vao/timkiem.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetXeDangKy">
+            <summary>
+              Looks up a localized string similar to /api/vethang/xedangky.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetXeHuy">
+            <summary>
+              Looks up a localized string similar to /api/vethang/xehuy.
             </summary>
         </member>
         <member name="P:EPK.Data.Resources.CurrentLink.ThongKeChiTiet">

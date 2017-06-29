@@ -10,6 +10,8 @@
          'epk.vethangs',
          'epk.danhmucs',
 
+         'epk.timkiems',
+         'epk.lichsus',
          'epk.thongkegiahans',
          'epk.thongkenhanhs',
          'epk.thongkechitiets',
