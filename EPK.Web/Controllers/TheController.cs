@@ -71,62 +71,6 @@ namespace EPK.Web.Controllers
             });
         }
 
-        [Route("update")]
-        [HttpPut]
-        public HttpResponseMessage Put(HttpRequestMessage request, The the)
-        {
-            return CreateHttpResponse(request, () =>
-            {
-                HttpResponseMessage response = null;
-                if (!ModelState.IsValid)
-                {
-                    request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-                }
-                else
-                {
-                    var result = _theService.Update(the);
-                    if (result.IsSuccessStatusCode)
-                    {
-                        var newThe = result.Content.ReadAsAsync<The>().Result;
-                        response = request.CreateResponse(result.StatusCode, newThe);
-                    }
-                    else
-                    {
-                        response = request.CreateErrorResponse(result.StatusCode, result.Content.ReadAsStringAsync().Result);
-                    }
-                }
-                return response;
-            });
-        }
-
-        [Route("delete")]
-        [HttpDelete]
-        public HttpResponseMessage Delete(HttpRequestMessage request, string id)
-        {
-            return CreateHttpResponse(request, () =>
-            {
-                HttpResponseMessage response = null;
-                if (!ModelState.IsValid)
-                {
-                    request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-                }
-                else
-                {
-                    var result = _theService.Delete(id);
-                    if (result.IsSuccessStatusCode)
-                    {
-                        var theOld = result.Content.ReadAsAsync<The>().Result;
-                        response = request.CreateResponse(result.StatusCode, theOld);
-                    }
-                    else
-                    {
-                        response = request.CreateErrorResponse(result.StatusCode, result.Content.ReadAsStringAsync().Result);
-                    }
-                }
-                return response;
-            });
-        }
-
         /// <summary>
         ///
         /// </summary>

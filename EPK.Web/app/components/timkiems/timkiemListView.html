@@ -23,7 +23,7 @@
                 <form class="form-inline">
                     <div class="input-group">
                         <div class="input-group-addon">Tìm kiếm thẻ & biển số</div>
-                        <input name="keyword" class="form-control" placeholder="Nhập thẻ xe hoặc biển số..." required ng-model="keyword">
+                        <input id="txtkeyword" name="keyword" class="form-control" placeholder="Nhập thẻ xe hoặc biển số..." required ng-model="keyword">
                     </div>
                     <div class="input-group">
                         <div class="input-group-addon">Từ</div>
@@ -33,32 +33,23 @@
                         <div class="input-group-addon">Đến</div>
                         <input type="date" name="ketThuc" class="form-control" required ng-model="ketThuc">
                     </div>
-                    <button class="btn btn-default" id="btnThongKe" ng-click="search()" disabled>Tìm kiếm</button>
+                    <button class="btn btn-default" id="btnThongKe" ng-click="search()">Tìm kiếm</button>
                 </form>
                 <form class="form-inline">
                     <div class="input-group">
                         <div class="input-group-addon">Khu vực tìm kiếm</div>
-                        <select class="form-control" ng-model="khuvuc" ng-change="switchSelectKV()">
-                            <option value="tatcakv" selected>Tất cả</option>
-                            <option value="trongbai">Trong bãi</option>
-                            <option value="ngoaibai">Ngoài bãi</option>
-                        </select>
+                        <input type="checkbox" name="trongbai" value="trongbai" checked ng-model="trongbai"> Trong bãi
+                        <input type="checkbox" name="ngoaibai" value="ngoaibai" checked ng-model="ngoaibai"> Ngoài bãi
                     </div>
                     <div class="input-group">
                         <div class="input-group-addon">Khoảng thời gian tìm kiếm</div>
-                        <select class="form-control" ng-model="thoigian" ng-change="switchSelectTG()">
-                            <option value="tatcatg" selected>Tất cả</option>
-                            <option value="vao">Vào</option>
-                            <option value="ra">Ra</option>
-                        </select>
+                        <input type="radio" name="gender" value="vao" checked ng-model="thoigian"> Vào
+                        <input type="radio" name="gender" value="ra" ng-model="thoigian"> Ra
                     </div>
                     <div class="input-group">
                         <div class="input-group-addon">Loại vé tìm kiếm</div>
-                        <select class="form-control" ng-model="loaive" ng-change="switchSelectLV()">
-                            <option value="tatcalv" selected>Tất cả</option>
-                            <option value="xevanglai">Xe vãng lai</option>
-                            <option value="xethang">Xe tháng</option>
-                        </select>
+                        <input type="checkbox" name="xethang" value="xethang" checked ng-model="xethang"> Xe tháng
+                        <input type="checkbox" name="vanglai" value="vanglai" checked ng-model="vanglai"> Xe vãng lai
                     </div>
                 </form>
             </di>
@@ -71,8 +62,8 @@
                             <th>Giờ vào</th>
                             <th>Giờ ra</th>
                         </tr>
-                        <tr ng-repeat="item in data">
-                            <td>{{item.MaThe}}</td>
+                        <tr ng-repeat="item in data" class="tr-click tr-click-{{item.MaThe}}">
+                            <td><a ng-click="showImage(item.MaThe+'-'+item.GioVao)">{{item.MaThe}}</a></td>
                             <td>{{item.BienSo}}</td>
                             <td>{{item.GioVao}}</td>
                             <td>{{item.GioRa}}</td>
@@ -94,20 +85,20 @@
                 <div class="col-md-3">
                     <table class="table table-bordered">
                         <tr>
-                            <th>Mã thẻ</th>
+                            <th>Hình ảnh vào</th>
                         </tr>
-                        <tr ng-repeat="item in data">
-                            <td>{{item.MaThe}}</td>
+                        <tr ng-repeat="item in hinhanhvao" class="tblHinhAnhVao">
+                            <td><img src="data:image/png;base64,{{item.HinhAnh}}"></td>
                         </tr>
                     </table>
                 </div>
                 <div class="col-md-3">
                     <table class="table table-bordered">
                         <tr>
-                            <th>Mã thẻ</th>
+                            <th>Hình ảnh ra</th>
                         </tr>
-                        <tr ng-repeat="item in data">
-                            <td>{{item.MaThe}}</td>
+                        <tr ng-repeat="item in hinhanhra" class="tblHinhAnhRa">
+                            <td><img src="data:image/png;base64,{{item.HinhAnh}}"></td>
                         </tr>
                     </table>
                 </div>

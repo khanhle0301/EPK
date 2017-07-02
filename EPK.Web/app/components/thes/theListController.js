@@ -11,8 +11,6 @@
         $scope.totalCount = 0;
 
         $scope.getThes = getThes;
-
-        $scope.deleteThe = deleteThe;
         $scope.selectAll = selectAll;
         $scope.deleteMultiple = deleteMultiple;
 
@@ -61,32 +59,13 @@
             }
         }, true);
 
-        function deleteThe(id) {
-            $ngBootbox.confirm('Bạn có chắc muốn xóa?').then(function () {
-                var config = {
-                    params: {
-                        id: id
-                    }
-                }
-                apiService.del('api/the/delete',
-                    config,
-                    function () {
-                        notificationService.displaySuccess('Xóa thành công');
-                        getThes();
-                    },
-                    function () {
-                        notificationService.displayError('Xóa không thành công');
-                    });
-            });
-        }
-
         function getThes(page) {
             $scope.loading = true;
             page = page || 0;
             var config = {
                 params: {
                     page: page,
-                    pageSize: 5
+                    pageSize: 10
                 }
             }
             apiService.get('api/the/getall',

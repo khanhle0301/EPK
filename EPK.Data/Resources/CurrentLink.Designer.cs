@@ -385,11 +385,47 @@ namespace EPK.Data.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /api/ra/theogiora.
+        /// </summary>
+        public static string GetRaTheoGioRa {
+            get {
+                return ResourceManager.GetString("GetRaTheoGioRa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/ra/theogiovao.
+        /// </summary>
+        public static string GetRaTheoGioVao {
+            get {
+                return ResourceManager.GetString("GetRaTheoGioVao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /api/vao/timkiem.
         /// </summary>
         public static string GetTimKiem {
             get {
                 return ResourceManager.GetString("GetTimKiem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/hinhanh/getbymahinh.
+        /// </summary>
+        public static string GetVaoMaHinhAnh {
+            get {
+                return ResourceManager.GetString("GetVaoMaHinhAnh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /api/vao/timkiem.
+        /// </summary>
+        public static string GetVaoTimKiem {
+            get {
+                return ResourceManager.GetString("GetVaoTimKiem", resourceCulture);
             }
         }
         

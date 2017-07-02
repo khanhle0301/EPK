@@ -10,6 +10,8 @@ namespace EPK.Service
     public interface IVaoService
     {
         HttpResponseMessage GetTimKiem(string batDau, string ketThuc);
+
+        HttpResponseMessage GetVaoTimKiem(string maThe, string bienSo, string batDau, string ketThuc);
     }
 
     public class VaoService : IVaoService
@@ -23,6 +25,11 @@ namespace EPK.Service
                 BaseAddress = new Uri(ConfigHelper.GetByKey("CurrentLink"))
             };
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", CommonConstants.Token);
+        }
+
+        public HttpResponseMessage GetVaoTimKiem(string maThe, string bienSo, string batDau, string ketThuc)
+        {
+            return _client.GetAsync(CurrentLink.GetVaoTimKiem + "?maThe=" + maThe + "&bienSo=" + bienSo + "&batDau=" + batDau + "&ketThuc=" + ketThuc).Result;
         }
 
         public HttpResponseMessage GetTimKiem(string batDau, string ketThuc)

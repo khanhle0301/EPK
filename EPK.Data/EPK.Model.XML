@@ -227,7 +227,27 @@
               Looks up a localized string similar to /api/nhanvien/getbyid.
             </summary>
         </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetRaTheoGioRa">
+            <summary>
+              Looks up a localized string similar to /api/ra/theogiora.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetRaTheoGioVao">
+            <summary>
+              Looks up a localized string similar to /api/ra/theogiovao.
+            </summary>
+        </member>
         <member name="P:EPK.Data.Resources.CurrentLink.GetTimKiem">
+            <summary>
+              Looks up a localized string similar to /api/vao/timkiem.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetVaoMaHinhAnh">
+            <summary>
+              Looks up a localized string similar to /api/hinhanh/getbymahinh.
+            </summary>
+        </member>
+        <member name="P:EPK.Data.Resources.CurrentLink.GetVaoTimKiem">
             <summary>
               Looks up a localized string similar to /api/vao/timkiem.
             </summary>

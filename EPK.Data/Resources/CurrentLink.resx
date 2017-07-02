@@ -225,7 +225,19 @@
   <data name="GetByIdNhanVien" xml:space="preserve">
     <value>/api/nhanvien/getbyid</value>
   </data>
+  <data name="GetRaTheoGioRa" xml:space="preserve">
+    <value>/api/ra/theogiora</value>
+  </data>
+  <data name="GetRaTheoGioVao" xml:space="preserve">
+    <value>/api/ra/theogiovao</value>
+  </data>
   <data name="GetTimKiem" xml:space="preserve">
+    <value>/api/vao/timkiem</value>
+  </data>
+  <data name="GetVaoMaHinhAnh" xml:space="preserve">
+    <value>/api/hinhanh/getbymahinh</value>
+  </data>
+  <data name="GetVaoTimKiem" xml:space="preserve">
     <value>/api/vao/timkiem</value>
   </data>
   <data name="GetXeDangKy" xml:space="preserve">

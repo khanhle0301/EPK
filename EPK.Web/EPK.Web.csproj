@@ -239,6 +239,7 @@
     <Compile Include="Controllers\ThongKeController.cs" />
     <Compile Include="Controllers\ThongKeGiaHanController.cs" />
     <Compile Include="Controllers\ThongKeNhanhController.cs" />
+    <Compile Include="Controllers\TimKiemController.cs" />
     <Compile Include="Controllers\VeThangController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -256,6 +257,7 @@
     <Compile Include="Models\DmNhanVienViewModel.cs" />
     <Compile Include="Models\DmVeThangViewModel.cs" />
     <Compile Include="Models\GiaHanViewModel.cs" />
+    <Compile Include="Models\HinhAnhViewModel.cs" />
     <Compile Include="Models\LichSuVeThangViewModel.cs" />
     <Compile Include="Models\ListLoaiGiaVe.cs" />
     <Compile Include="Models\ListXe.cs" />
@@ -269,6 +271,7 @@
     <Compile Include="Models\ThongKeGiaHanViewModel.cs" />
     <Compile Include="Models\ThongKeLichSuViewModel.cs" />
     <Compile Include="Models\ThongKeNhanhViewModel.cs" />
+    <Compile Include="Models\TimKiemViewModel.cs" />
     <Compile Include="Models\VeThangViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources1.Designer.cs">
@@ -346,6 +349,7 @@
     <Content Include="Assets\css\AdminLTE.css" />
     <Content Include="Assets\css\AdminLTE.min.css" />
     <Content Include="Assets\css\custom.css" />
+    <Content Include="Assets\css\select2.min.css" />
     <Content Include="Assets\css\skins\skin-black-light.css" />
     <Content Include="Assets\css\skins\skin-black-light.min.css" />
     <Content Include="Assets\css\skins\skin-black.css" />
@@ -405,6 +409,7 @@
     <Content Include="Assets\js\demo.js" />
     <Content Include="Assets\js\pages\dashboard.js" />
     <Content Include="Assets\js\pages\dashboard2.js" />
+    <Content Include="Assets\js\select2.full.min.js" />
     <Content Include="Assets\libs\angular-loading-bar\build\loading-bar.css" />
     <Content Include="Assets\libs\angular-loading-bar\build\loading-bar.js" />
     <Content Include="Assets\libs\angular-loading-bar\build\loading-bar.min.css" />
