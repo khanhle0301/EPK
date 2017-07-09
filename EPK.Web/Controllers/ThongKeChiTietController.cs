@@ -190,7 +190,7 @@ namespace EPK.Web.Controllers
                     }
                     else
                     {
-                        var resultVao = _vaoService.GetTimKiem(batDau, ketThuc);
+                        var resultVao = _vaoService.GetVaoTimKiem(null, null, batDau, ketThuc);
 
                         if (!resultVao.IsSuccessStatusCode)
                         {
